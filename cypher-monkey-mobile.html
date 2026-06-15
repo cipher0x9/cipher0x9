@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<title>🐵 CYPHER0X9 · MOBILE</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#000;overflow:hidden;font-family:monospace;touch-action:none}
+canvas{display:block}
+.scanline{position:fixed;inset:0;
+  background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,206,209,.01) 2px,rgba(0,206,209,.01) 4px);
+  pointer-events:none;z-index:11}
+.vignette{position:fixed;inset:0;background:radial-gradient(circle,transparent 40%,rgba(0,0,0,.85) 100%);
+  pointer-events:none;z-index:11}
+.title-block{position:fixed;bottom:clamp(40px,8vh,100px);left:50%;transform:translateX(-50%);text-align:center;z-index:12;width:90%}
+.title-main{font-size:clamp(24px,6vw,56px);font-weight:bold;letter-spacing:.2em;
+  background:linear-gradient(90deg,#00CED1,#8B5CF6,#F59E0B,#00CED1);background-size:300% 100%;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  animation:shimmer 3s linear infinite;filter:drop-shadow(0 0 30px rgba(0,206,209,.5))}
+@keyframes shimmer{0%{background-position:0% 50%}100%{background-position:300% 50%}}
+.title-sub{font-family:serif;font-size:clamp(12px,3vw,18px);letter-spacing:.3em;color:#8B5CF6;opacity:.8;margin-top:6px}
+.title-tag{font-size:clamp(8px,1.8vw,11px);letter-spacing:.3em;color:#6B7280;margin-top:4px}
+.tap-hint{position:fixed;bottom:clamp(16px,3vh,30px);left:50%;transform:translateX(-50%);z-index:13;
+  color:#F59E0B;font-size:clamp(9px,2vw,11px);letter-spacing:3px;animation:fade 2.5s ease-in-out infinite}
+@keyframes fade{0%,100%{opacity:.25}50%{opacity:.8}}
+.corner{position:fixed;z-index:12;font-size:clamp(7px,1.5vw,10px);letter-spacing:2px;opacity:.35}
+.c-tl{top:12px;left:16px;color:#00CED1}.c-tr{top:12px;right:16px;color:#8B5CF6}
+.c-bl{bottom:12px;left:16px;color:#8B5CF6}.c-br{bottom:12px;right:16px;color:#00CED1}
+</style>
+</head>
+<body>
+<div class="scanline"></div><div class="vignette"></div>
+<div class="corner c-tl">सनातन-गणना</div><div class="corner c-tr">v7.8 · M4</div>
+<div class="corner c-bl">CYPHER MONKEY</div><div class="corner c-br">सन्ध्या-च्य्फेर्</div>
+
+<div class="title-block">
+  <div class="title-main">CYPHER0X9</div>
+  <div class="title-sub">सन्ध्या-च्य्फेर्</div>
+  <div class="title-tag">ANCIENT CODE · MODERN MIND · AUTONOMOUS SOUL</div>
+</div>
+<div class="tap-hint">⬡ TAP ANYWHERE ⬡</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+// ── SCENE ──
+const scene = new THREE.Scene();
+scene.fog = new THREE.FogExp2(0x000011, 0.00012);
+
+const camera = new THREE.PerspectiveCamera(55, innerWidth/innerHeight, 0.1, 150);
+camera.position.z = 50;
+
+const renderer = new THREE.WebGLRenderer({antialias:true,alpha:true});
+renderer.setSize(innerWidth,innerHeight);
+renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+document.body.prepend(renderer.domElement);
+
+// Lights
+scene.add(new THREE.AmbientLight(0x1a1040, 0.8));
+const p1 = new THREE.PointLight(0x00CED1, 60, 80); p1.position.set(0,15,25); scene.add(p1);
+const p2 = new THREE.PointLight(0x8B5CF6, 40, 60); p2.position.set(-25,-5,15); scene.add(p2);
+const p3 = new THREE.PointLight(0xF59E0B, 30, 50); p3.position.set(15,-15,-15); scene.add(p3);
+
+// ── MANDALA ──
+const mandala = new THREE.Group();
+for(let i=0;i<6;i++){
+  const r = 10 + i*2.2;
+  const g = new THREE.TorusGeometry(r,0.03,12,80);
+  const m = new THREE.MeshBasicMaterial({color:i%2===0?0x00CED1:0x8B5CF6,transparent:true,opacity:0.25-i*0.02});
+  const ring = new THREE.Mesh(g,m);
+  ring.rotation.x = Math.PI/2 + i*0.15; ring.rotation.y = i*0.4;
+  mandala.add(ring);
+}
+scene.add(mandala);
+
+// ── MONKEY HEAD ──
+const head = new THREE.Group();
+
+// Cranium
+const cranium = new THREE.Mesh(
+  new THREE.SphereGeometry(7,40,40),
+  new THREE.MeshPhongMaterial({color:0x1a1040,emissive:0x0a0520,shininess:50,specular:0x00CED1,transparent:true,opacity:0.85})
+); cranium.scale.set(1,1.15,0.85); head.add(cranium);
+
+// Wireframe
+const wire = new THREE.Mesh(
+  new THREE.SphereGeometry(7.2,20,20),
+  new THREE.MeshBasicMaterial({color:0x00CED1,wireframe:true,transparent:true,opacity:0.06})
+); wire.scale.set(1,1.15,0.85); head.add(wire);
+
+// Ears
+function ear(x){
+  const e = new THREE.Group();
+  const o = new THREE.Mesh(new THREE.SphereGeometry(2.5,20,20),new THREE.MeshPhongMaterial({color:0x0f0a25,emissive:0x050210,specular:0x8B5CF6}));
+  o.scale.set(0.8,1.1,0.6); e.add(o);
+  const i = new THREE.Mesh(new THREE.SphereGeometry(1.5,14,14),new THREE.MeshPhongMaterial({color:0x1a1040}));
+  i.scale.set(0.7,1.1,0.5); i.position.z=0.5; e.add(i);
+  e.position.set(x,2,-1.5); return e;
+}
+head.add(ear(-8.5)); head.add(ear(8.5));
+
+// Eyes
+function eye(x){
+  const e = new THREE.Group();
+  const s = new THREE.Mesh(new THREE.SphereGeometry(1.7,20,20),new THREE.MeshPhongMaterial({color:0x050510}));
+  s.scale.set(1,0.9,0.5); e.add(s);
+  const ir = new THREE.Mesh(new THREE.SphereGeometry(1,14,14),new THREE.MeshPhongMaterial({color:0x00CED1,emissive:0x00CED1,emissiveIntensity:2}));
+  ir.position.z=0.7; e.add(ir);
+  const pu = new THREE.Mesh(new THREE.SphereGeometry(0.4,10,10),new THREE.MeshPhongMaterial({color:0xF59E0B,emissive:0xF59E0B,emissiveIntensity:1.5}));
+  pu.position.z=1.2; e.add(pu);
+  e.position.set(x,1.3,5.5); e.userData={iris:ir}; return e;
+}
+const le = eye(-2.8), re = eye(2.8);
+head.add(le); head.add(re);
+
+// Snout
+const sn = new THREE.Mesh(new THREE.SphereGeometry(2.2,20,20),new THREE.MeshPhongMaterial({color:0x120d2b,emissive:0x040210}));
+sn.scale.set(1.1,0.7,0.6); sn.position.set(0,-1.8,5.8); head.add(sn);
+
+// Mouth
+const mc = new THREE.QuadraticBezierCurve3(new THREE.Vector3(-1.2,-3,6.3),new THREE.Vector3(0,-3.8,6.8),new THREE.Vector3(1.2,-3,6.3));
+const ml = new THREE.Line(new THREE.BufferGeometry().setFromPoints(mc.getPoints(24)),new THREE.LineBasicMaterial({color:0xF59E0B}));
+head.add(ml);
+
+// Crown
+const crown = new THREE.Group();
+for(let i=0;i<5;i++){
+  const h = 1.3+Math.random()*1.8;
+  const b = new THREE.Mesh(new THREE.BoxGeometry(0.6,h,0.25),new THREE.MeshPhongMaterial({color:0x00CED1,emissive:0x00CED1,emissiveIntensity:0.3,transparent:true,opacity:0.7}));
+  b.position.set((i-2)*2.2,8,-0.8); crown.add(b);
+  const n = new THREE.Mesh(new THREE.SphereGeometry(0.3,8,8),new THREE.MeshPhongMaterial({color:i===2?0xF59E0B:0x00CED1,emissive:i===2?0xF59E0B:0x00CED1,emissiveIntensity:1}));
+  n.position.set((i-2)*2.2,8+h/2+0.4,-0.8);
+  n.userData={baseY:n.position.y}; crown.add(n);
+}
+head.add(crown);
+
+// Om ring
+const om = new THREE.Mesh(new THREE.TorusGeometry(0.7,0.08,8,14),new THREE.MeshBasicMaterial({color:0xF59E0B,transparent:true,opacity:0.7}));
+om.position.set(0,11,-0.8); head.add(om);
+
+scene.add(head);
+
+// ── PARTICLES ──
+const pc = 1500;
+const pg = new THREE.BufferGeometry();
+const pa = new Float32Array(pc*3), ca = new Float32Array(pc*3);
+const cols = [new THREE.Color(0x00CED1),new THREE.Color(0x8B5CF6),new THREE.Color(0xF59E0B)];
+for(let i=0;i<pc;i++){
+  const th = Math.random()*Math.PI*2, ph = Math.acos(2*Math.random()-1), r = 20+Math.random()*45;
+  pa[i*3]=r*Math.sin(ph)*Math.cos(th); pa[i*3+1]=r*Math.sin(ph)*Math.sin(th); pa[i*3+2]=r*Math.cos(ph);
+  const c=cols[Math.floor(Math.random()*3)]; ca[i*3]=c.r; ca[i*3+1]=c.g; ca[i*3+2]=c.b;
+}
+pg.setAttribute('position',new THREE.BufferAttribute(pa,3)); pg.setAttribute('color',new THREE.BufferAttribute(ca,3));
+const pm = new THREE.Points(pg,new THREE.PointsMaterial({size:0.12,vertexColors:true,blending:THREE.AdditiveBlending,depthWrite:false,transparent:true,opacity:0.5}));
+scene.add(pm);
+
+// ── MOUSE / TOUCH ──
+const mouse = new THREE.Vector2(), target = new THREE.Vector2();
+let tapping = false;
+
+document.addEventListener('mousemove',e=>{target.x=(e.clientX/innerWidth)*2-1;target.y=-(e.clientY/innerHeight)*2+1});
+document.addEventListener('touchmove',e=>{e.preventDefault();const t=e.touches[0];target.x=(t.clientX/innerWidth)*2-1;target.y=-(t.clientY/innerHeight)*2+1},{passive:false});
+
+function burst(){
+  for(let i=0;i<80;i++){
+    const idx=Math.floor(Math.random()*pc);
+    const th=Math.random()*Math.PI*2,ph=Math.random()*Math.PI,r=8+Math.random()*25;
+    pa[idx*3]=r*Math.sin(ph)*Math.cos(th);pa[idx*3+1]=r*Math.sin(ph)*Math.sin(th);pa[idx*3+2]=r*Math.cos(ph);
+  }
+  pg.attributes.position.needsUpdate=true;
+}
+document.addEventListener('mousedown',()=>{tapping=true;burst();setTimeout(()=>tapping=false,300)});
+document.addEventListener('touchstart',e=>{e.preventDefault();tapping=true;burst();setTimeout(()=>tapping=false,300)},{passive:false});
+document.addEventListener('mouseup',()=>tapping=false);
+document.addEventListener('touchend',()=>tapping=false);
+
+window.addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight)});
+
+// ── ANIMATION ──
+const clock = new THREE.Clock();
+function animate(){
+  requestAnimationFrame(animate);
+  const t=clock.getElapsedTime();
+  mouse.x+=(target.x-mouse.x)*0.06; mouse.y+=(target.y-mouse.y)*0.06;
+
+  mandala.rotation.z+=0.003; mandala.rotation.x+=0.001;
+  head.rotation.y=mouse.x*0.6; head.rotation.x=mouse.y*0.25+Math.sin(t*0.3)*0.08;
+  head.position.y=Math.sin(t*0.7)*1;
+
+  [le,re].forEach(e=>e.userData.iris.material.emissiveIntensity=1+Math.sin(t*3)*0.6);
+  crown.children.forEach(c=>{if(c.userData&&c.userData.baseY!==undefined)c.position.y=c.userData.baseY+Math.sin(t*2+Math.random())*0.5});
+  om.rotation.z+=0.025; om.scale.setScalar(1+Math.sin(t*2)*0.12);
+
+  pm.rotation.y+=0.0003; pm.rotation.x+=0.0001;
+  p2.position.x=Math.cos(t*0.4)*25; p2.position.z=Math.sin(t*0.4)*15;
+  p3.position.x=Math.cos(t*0.6+2)*20; p3.position.z=Math.sin(t*0.6+2)*20;
+  p1.intensity=60+Math.sin(t*2)*10;
+
+  renderer.render(scene,camera);
+}
+animate();
+</script>
+</body>
+</html>
