@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🐵 CYPHER0X9 · Living Signature</title>
+<style>
+  :root {
+    --cyan: #00CED1; --purple: #8B5CF6; --amber: #F59E0B;
+    --deep: #0A0A1A; --navy: #1E1B4B;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--deep);
+    display: flex; justify-content: center; align-items: center;
+    min-height: 100vh; overflow: hidden;
+    font-family: monospace;
+    cursor: crosshair;
+  }
+  canvas { position: fixed; top: 0; left: 0; z-index: 0; }
+  .container {
+    position: relative; z-index: 1;
+    display: flex; flex-direction: column; align-items: center;
+    gap: 20px;
+  }
+
+  /* ── MONKEY SVG ── */
+  .monkey-wrap {
+    position: relative; width: 360px; height: 360px;
+    filter: drop-shadow(0 0 60px rgba(0,206,209,0.3))
+            drop-shadow(0 0 120px rgba(139,92,246,0.2));
+    animation: float 6s ease-in-out infinite;
+  }
+  @keyframes float {
+    0%,100% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-12px) rotate(0.5deg); }
+    75% { transform: translateY(8px) rotate(-0.5deg); }
+  }
+  .mandala {
+    position: absolute; top: 50%; left: 50%; width: 340px; height: 340px;
+    transform: translate(-50%,-50%);
+    animation: spin 40s linear infinite;
+  }
+  @keyframes spin { to { transform: translate(-50%,-50%) rotate(360deg); } }
+  .mandala-inner {
+    position: absolute; top: 50%; left: 50%; width: 260px; height: 260px;
+    transform: translate(-50%,-50%);
+    animation: spin 25s linear infinite reverse;
+  }
+  .eye-glow {
+    animation: pulse 3s ease-in-out infinite;
+  }
+  .eye-glow:nth-child(2) { animation-delay: 0.15s; }
+  @keyframes pulse {
+    0%,100% { opacity: 0.7; filter: drop-shadow(0 0 8px var(--cyan)); }
+    50% { opacity: 1; filter: drop-shadow(0 0 25px var(--cyan)) drop-shadow(0 0 45px var(--cyan)); }
+  }
+  .circuit {
+    animation: circuitFlow 4s ease-in-out infinite;
+  }
+  @keyframes circuitFlow {
+    0%,100% { stroke-dashoffset: 0; opacity: 0.6; }
+    50% { stroke-dashoffset: -20; opacity: 1; }
+  }
+  .tilak {
+    animation: tilakPulse 2s ease-in-out infinite;
+  }
+  @keyframes tilakPulse {
+    0%,100% { r: 5; opacity: 0.5; }
+    50% { r: 8; opacity: 1; }
+  }
+
+  /* ── TITLE ── */
+  .title {
+    font-size: 52px; font-weight: bold; letter-spacing: 12px;
+    background: linear-gradient(90deg, var(--cyan), var(--purple), var(--amber));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: titleShimmer 4s ease-in-out infinite;
+    text-shadow: none;
+    filter: drop-shadow(0 0 30px rgba(0,206,209,0.5));
+  }
+  @keyframes titleShimmer {
+    0%,100% { filter: drop-shadow(0 0 30px rgba(0,206,209,0.5)) hue-rotate(0deg); }
+    50% { filter: drop-shadow(0 0 50px rgba(139,92,246,0.7)) hue-rotate(15deg); }
+  }
+  .subtitle {
+    font-family: serif; font-size: 20px; letter-spacing: 8px;
+    color: var(--purple); opacity: 0.8;
+    animation: fadeInOut 3s ease-in-out infinite;
+  }
+  @keyframes fadeInOut {
+    0%,100% { opacity: 0.6; }
+    50% { opacity: 1; }
+  }
+  .tagline {
+    font-size: 12px; letter-spacing: 6px; color: #6B7280;
+    opacity: 0.7;
+  }
+
+  /* ── BADGES ── */
+  .badges {
+    display: flex; gap: 14px; flex-wrap: wrap; justify-content: center;
+  }
+  .badge {
+    padding: 6px 20px; border-radius: 20px; font-size: 11px;
+    font-family: monospace; letter-spacing: 3px;
+    border: 1px solid; transition: all 0.3s ease;
+  }
+  .badge:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 25px currentColor;
+  }
+  .b-cyan { color: var(--cyan); border-color: var(--cyan); background: rgba(0,206,209,0.08); }
+  .b-purple { color: var(--purple); border-color: var(--purple); background: rgba(139,92,246,0.08); }
+  .b-amber { color: var(--amber); border-color: var(--amber); background: rgba(245,158,11,0.08); }
+
+  /* ── PARTICLES INFO BAR ── */
+  .info {
+    position: fixed; bottom: 20px; right: 24px;
+    color: #6B7280; font-size: 10px; letter-spacing: 2px;
+    opacity: 0.5;
+  }
+</style>
+</head>
+<body>
+
+<canvas id="particles"></canvas>
+
+<div class="container">
+  <!-- MONKEY -->
+  <div class="monkey-wrap">
+    <svg viewBox="0 0 400 400" width="360" height="360">
+      <defs>
+        <filter id="g"><feGaussianBlur stdDeviation="3"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+        <filter id="gL"><feGaussianBlur stdDeviation="8"/><feMerge><feMergeNode in="blur"/><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+        <linearGradient id="headG" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#1E1B4B"/><stop offset="100%" stop-color="#2D1B4E"/>
+        </linearGradient>
+      </defs>
+
+      <!-- Mandala -->
+      <g class="mandala" transform="translate(200,180)">
+        <circle r="155" fill="none" stroke="#8B5CF6" stroke-width="0.4" opacity="0.2"/>
+        <circle r="145" fill="none" stroke="#00CED1" stroke-width="0.3" opacity="0.15"/>
+        <circle r="135" fill="none" stroke="#8B5CF6" stroke-width="0.5" opacity="0.25"/>
+        <circle r="125" fill="none" stroke="#F59E0B" stroke-width="0.3" opacity="0.1"/>
+        <g fill="none" stroke="#00CED1" stroke-width="0.5" opacity="0.3">
+          <polygon points="0,-140 121,-70 121,70 0,140 -121,70 -121,-70"/>
+          <polygon points="0,-120 104,-60 104,60 0,120 -104,60 -104,-60" transform="rotate(30)"/>
+        </g>
+        <g fill="#8B5CF6" opacity="0.2">
+          <ellipse cx="0" cy="-105" rx="6" ry="18"/><ellipse cx="91" cy="-52" rx="6" ry="18" transform="rotate(30 91 -52)"/>
+          <ellipse cx="91" cy="52" rx="6" ry="18" transform="rotate(-30 91 52)"/>
+          <ellipse cx="0" cy="105" rx="6" ry="18"/><ellipse cx="-91" cy="52" rx="6" ry="18" transform="rotate(30 -91 52)"/>
+          <ellipse cx="-91" cy="-52" rx="6" ry="18" transform="rotate(-30 -91 -52)"/>
+        </g>
+      </g>
+
+      <!-- Inner mandala -->
+      <g class="mandala-inner" transform="translate(200,180)">
+        <circle r="95" fill="none" stroke="#00CED1" stroke-width="0.4" opacity="0.2"/>
+        <circle r="85" fill="none" stroke="#8B5CF6" stroke-width="0.6" opacity="0.3"/>
+        <polygon points="0,-85 74,-42 74,42 0,85 -74,42 -74,-42" fill="none" stroke="#F59E0B" stroke-width="0.4" opacity="0.2"/>
+        <g fill="#00CED1" opacity="0.3">
+          <circle cx="0" cy="-65" r="3"/><circle cx="56" cy="-32" r="3"/>
+          <circle cx="56" cy="32" r="3"/><circle cx="0" cy="65" r="3"/>
+          <circle cx="-56" cy="32" r="3"/><circle cx="-56" cy="-32" r="3"/>
+        </g>
+      </g>
+
+      <!-- MONKEY FACE -->
+      <g transform="translate(200,185)">
+        <!-- Ears -->
+        <ellipse cx="-115" cy="-15" rx="38" ry="44" fill="#0F0F23" stroke="#8B5CF6" stroke-width="1.5" filter="url(#g)"/>
+        <ellipse cx="-115" cy="-15" rx="18" ry="24" fill="#1A1333"/>
+        <ellipse cx="115" cy="-15" rx="38" ry="44" fill="#0F0F23" stroke="#8B5CF6" stroke-width="1.5" filter="url(#g)"/>
+        <ellipse cx="115" cy="-15" rx="18" ry="24" fill="#1A1333"/>
+
+        <!-- Head -->
+        <ellipse cx="0" cy="20" rx="108" ry="98" fill="url(#headG)" stroke="#00CED1" stroke-width="2" filter="url(#g)"/>
+
+        <!-- Crown circuits -->
+        <path d="M-80,-78 L-45,-95 L-22,-82 L0,-98 L22,-82 L45,-95 L80,-78 L55,-58 L0,-42 L-55,-58Z" fill="#0F0F23" stroke="#00CED1" stroke-width="1.5" class="circuit" stroke-dasharray="20 4"/>
+        <circle cx="-45" cy="-90" r="3" fill="#00CED1" class="tilak"/>
+        <circle cx="0" cy="-93" r="5" fill="#F59E0B" class="tilak"/>
+        <circle cx="45" cy="-90" r="3" fill="#00CED1" class="tilak"/>
+
+        <!-- ॐ -->
+        <text x="0" y="-72" text-anchor="middle" fill="#F59E0B" font-family="serif" font-size="30" filter="url(#gL)" opacity="0.85">ॐ</text>
+
+        <!-- Eyes -->
+        <ellipse cx="-38" cy="9" rx="20" ry="18" fill="#0A0A1A" stroke="#F59E0B" stroke-width="1.5"/>
+        <ellipse cx="-38" cy="9" rx="10" ry="12" fill="#00CED1" class="eye-glow"/>
+        <circle cx="-38" cy="9" r="4" fill="#fff" opacity="0.7"/>
+
+        <ellipse cx="38" cy="9" rx="20" ry="18" fill="#0A0A1A" stroke="#F59E0B" stroke-width="1.5"/>
+        <ellipse cx="38" cy="9" rx="10" ry="12" fill="#00CED1" class="eye-glow"/>
+        <circle cx="38" cy="9" r="4" fill="#fff" opacity="0.7"/>
+
+        <!-- Snout -->
+        <ellipse cx="0" cy="36" rx="26" ry="20" fill="#120D2B" stroke="#8B5CF6" stroke-width="1.2"/>
+        <ellipse cx="-9" cy="32" rx="5" ry="6" fill="#0A0A1A"/>
+        <ellipse cx="9" cy="32" rx="5" ry="6" fill="#0A0A1A"/>
+
+        <!-- Smile -->
+        <path d="M-20,46 Q0,65 20,46" fill="none" stroke="#F59E0B" stroke-width="2" filter="url(#g)"/>
+
+        <!-- Side circuits -->
+        <rect x="-100" y="14" width="16" height="16" rx="2" fill="none" stroke="#00CED1" stroke-width="1" opacity="0.5"/>
+        <line x1="-96" y1="14" x2="-96" y2="5" stroke="#00CED1" stroke-width="1" opacity="0.5"/>
+        <line x1="-88" y1="14" x2="-88" y2="5" stroke="#00CED1" stroke-width="1" opacity="0.5"/>
+        <line x1="-100" y1="22" x2="-109" y2="22" stroke="#00CED1" stroke-width="1" opacity="0.5"/>
+
+        <rect x="84" y="14" width="16" height="16" rx="2" fill="none" stroke="#00CED1" stroke-width="1" opacity="0.5"/>
+        <line x1="88" y1="14" x2="88" y2="5" stroke="#00CED1" stroke-width="1" opacity="0.5"/>
+        <line x1="96" y1="14" x2="96" y2="5" stroke="#00CED1" stroke-width="1" opacity="0.5"/>
+        <line x1="100" y1="22" x2="109" y2="22" stroke="#00CED1" stroke-width="1" opacity="0.5"/>
+      </g>
+    </svg>
+  </div>
+
+  <!-- TITLE -->
+  <div class="title">CYPHER0X9</div>
+  <div class="subtitle">सन्ध्या-च्य्फेर्</div>
+  <div class="tagline">सनातन-गणना · ANCIENT CODE · MODERN MIND · AUTONOMOUS SOUL</div>
+
+  <!-- BADGES -->
+  <div class="badges">
+    <span class="badge b-cyan">v7.8 ABSORPTION</span>
+    <span class="badge b-purple">MAC MINI M4</span>
+    <span class="badge b-amber">सनातन-गणना</span>
+  </div>
+</div>
+
+<div class="info">🐵 CYPHER MONKEY · v20x · click anywhere</div>
+
+<script>
+// ── PARTICLE SYSTEM ──
+const canvas = document.getElementById('particles');
+const ctx = canvas.getContext('2d');
+let W, H;
+
+function resize() {
+  W = canvas.width = window.innerWidth;
+  H = canvas.height = window.innerHeight;
+}
+resize();
+window.addEventListener('resize', resize);
+
+const particles = [];
+const COLORS = ['#00CED1','#8B5CF6','#F59E0B'];
+const BINARY = ['0','1','ॐ','𑁍','🔱','∞','ᛯ'];
+
+function createParticle(x, y) {
+  return {
+    x: x ?? Math.random() * W,
+    y: y ?? Math.random() * H,
+    vx: (Math.random() - 0.5) * 0.8,
+    vy: (Math.random() - 0.5) * 0.8 - 0.5,
+    size: Math.random() * 2 + 0.5,
+    color: COLORS[Math.floor(Math.random() * COLORS.length)],
+    life: 1,
+    decay: Math.random() * 0.005 + 0.003,
+    isBin: Math.random() > 0.85,
+    char: BINARY[Math.floor(Math.random() * BINARY.length)]
+  };
+}
+
+// Seed initial particles
+for (let i = 0; i < 120; i++) {
+  particles.push(createParticle());
+}
+
+// Binary rain
+const rainDrops = [];
+function spawnRain() {
+  rainDrops.push({
+    x: Math.random() * W,
+    y: -20,
+    speed: Math.random() * 2 + 1,
+    char: Math.random() > 0.5 ? '1' : '0',
+    opacity: Math.random() * 0.15 + 0.03,
+    color: Math.random() > 0.5 ? '#00CED1' : '#8B5CF6'
+  });
+  if (rainDrops.length > 80) rainDrops.shift();
+}
+
+// Click burst
+canvas.addEventListener('click', (e) => {
+  for (let i = 0; i < 30; i++) {
+    const p = createParticle(e.clientX, e.clientY);
+    p.vx = (Math.random() - 0.5) * 6;
+    p.vy = (Math.random() - 0.5) * 6;
+    p.size = Math.random() * 4 + 1;
+    p.life = 1.5;
+    p.decay = 0.015;
+    particles.push(p);
+  }
+});
+
+function draw() {
+  ctx.clearRect(0, 0, W, H);
+
+  // Update & draw particles
+  for (let i = particles.length - 1; i >= 0; i--) {
+    const p = particles[i];
+    p.x += p.vx; p.y += p.vy;
+    p.life -= p.decay;
+    if (p.life <= 0) { particles.splice(i, 1); continue; }
+
+    ctx.globalAlpha = p.life * 0.6;
+    if (p.isBin) {
+      ctx.fillStyle = p.color;
+      ctx.font = `${p.size * 8}px monospace`;
+      ctx.fillText(p.char, p.x, p.y);
+    } else {
+      ctx.fillStyle = p.color;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  }
+
+  // Binary rain
+  if (Math.random() > 0.5) spawnRain();
+  for (let i = rainDrops.length - 1; i >= 0; i--) {
+    const r = rainDrops[i];
+    r.y += r.speed;
+    if (r.y > H + 20) { rainDrops.splice(i, 1); continue; }
+    ctx.globalAlpha = r.opacity;
+    ctx.fillStyle = r.color;
+    ctx.font = '11px monospace';
+    ctx.fillText(r.char, r.x, r.y);
+  }
+
+  // Replenish particles
+  if (particles.length < 80 && Math.random() > 0.7) {
+    particles.push(createParticle());
+  }
+
+  ctx.globalAlpha = 1;
+  requestAnimationFrame(draw);
+}
+draw();
+</script>
+</body>
+</html>
