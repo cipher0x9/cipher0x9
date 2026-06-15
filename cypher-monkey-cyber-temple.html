@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🐵 CYPHER0X9 · 100X · CYBER TEMPLE</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#000;overflow:hidden;font-family:monospace;cursor:none}
+canvas{display:block}
+#overlay{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:10}
+.scanline{position:fixed;top:0;left:0;width:100%;height:100%;
+  background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,206,209,.015) 2px,rgba(0,206,209,.015) 4px);
+  pointer-events:none;z-index:11}
+.glitch{position:fixed;top:0;left:0;width:100%;height:100%;
+  background:linear-gradient(0deg,transparent 40%,rgba(139,92,246,.03) 40.5%,transparent 40.8%,
+  transparent 60%,rgba(0,206,209,.03) 60.5%,transparent 60.8%);
+  animation:glitch 8s infinite;pointer-events:none;z-index:11}
+@keyframes glitch{0%,100%{opacity:.3}50%{opacity:.6}51%{opacity:.3}53%{opacity:.7}54%{opacity:.3}}
+.vignette{position:fixed;inset:0;background:radial-gradient(circle,transparent 50%,rgba(0,0,0,.8) 100%);
+  pointer-events:none;z-index:11}
+.title-block{position:fixed;bottom:80px;left:50%;transform:translateX(-50%);text-align:center;z-index:12}
+.title-main{font-size:clamp(32px,6vw,72px);font-weight:bold;letter-spacing:.25em;
+  background:linear-gradient(90deg,#00CED1,#8B5CF6,#F59E0B,#00CED1);background-size:300% 100%;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  animation:shimmer 3s linear infinite;filter:drop-shadow(0 0 40px rgba(0,206,209,.6))}
+@keyframes shimmer{0%{background-position:0% 50%}100%{background-position:300% 50%}}
+.title-sub{font-family:serif;font-size:clamp(14px,2.5vw,22px);letter-spacing:.4em;color:#8B5CF6;
+  opacity:.8;margin-top:8px}
+.title-tag{font-size:clamp(9px,1.5vw,13px);letter-spacing:.4em;color:#6B7280;margin-top:6px}
+.corner{position:fixed;z-index:12;color:#00CED1;font-size:10px;letter-spacing:3px;opacity:.4}
+.c-tl{top:20px;left:24px}.c-tr{top:20px;right:24px}.c-bl{bottom:20px;left:24px}.c-br{bottom:20px;right:24px}
+.click-hint{position:fixed;bottom:30px;left:50%;transform:translateX(-50%);z-index:13;
+  color:#F59E0B;font-size:10px;letter-spacing:4px;animation:fadeHint 3s ease-in-out infinite}
+@keyframes fadeHint{0%,100%{opacity:.3}50%{opacity:.8}}
+#cursor{position:fixed;width:20px;height:20px;border:1px solid #00CED1;border-radius:50%;
+  pointer-events:none;z-index:20;transform:translate(-50%,-50%);
+  box-shadow:0 0 20px rgba(0,206,209,.5),inset 0 0 10px rgba(0,206,209,.2);
+  transition:width .2s,height .2s,border-color .2s}
+#cursor.active{width:40px;height:40px;border-color:#F59E0B;box-shadow:0 0 40px rgba(245,158,11,.8)}
+</style>
+</head>
+<body>
+
+<div class="scanline"></div><div class="glitch"></div><div class="vignette"></div>
+<div class="corner c-tl">सनातन-गणना</div><div class="corner c-tr">v7.8 · M4</div>
+<div class="corner c-bl">CYPHER MONKEY</div><div class="corner c-br">सन्ध्या-च्य्फेर्</div>
+
+<div class="title-block">
+  <div class="title-main">CYPHER0X9</div>
+  <div class="title-sub">सन्ध्या-च्य्फेर्</div>
+  <div class="title-tag">सनातन-गणना · ANCIENT CODE · MODERN MIND · AUTONOMOUS SOUL</div>
+</div>
+
+<div class="click-hint">⬡ CLICK ANYWHERE ⬡</div>
+<div id="cursor"></div>
+
+<script type="importmap">
+{"imports":{"three":"https://unpkg.com/three@0.160.0/build/three.module.js"}}
+</script>
+
+<script type="module">
+import * as THREE from 'three';
+
+// ── SCENE ──
+const scene = new THREE.Scene();
+scene.fog = new THREE.FogExp2(0x000011, 0.00008);
+
+const camera = new THREE.PerspectiveCamera(60, innerWidth/innerHeight, 0.1, 200);
+camera.position.z = 60;
+
+const renderer = new THREE.WebGLRenderer({antialias:true,alpha:true});
+renderer.setSize(innerWidth,innerHeight);
+renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.2;
+document.body.prepend(renderer.domElement);
+
+// ── LIGHTS ──
+const ambient = new THREE.AmbientLight(0x1a1040, 0.8);
+const point1 = new THREE.PointLight(0x00CED1, 80, 100);
+point1.position.set(0, 20, 30);
+const point2 = new THREE.PointLight(0x8B5CF6, 60, 80);
+point2.position.set(-30, -10, 20);
+const point3 = new THREE.PointLight(0xF59E0B, 40, 60);
+point3.position.set(20, -20, -20);
+scene.add(ambient, point1, point2, point3);
+
+// ── MANDALA RINGS ──
+const mandala = new THREE.Group();
+for (let i = 0; i < 8; i++) {
+  const r = 12 + i * 3;
+  const geo = new THREE.TorusGeometry(r, 0.03, 16, 120);
+  const mat = new THREE.MeshBasicMaterial({
+    color: i % 2 === 0 ? 0x00CED1 : 0x8B5CF6,
+    transparent: true, opacity: 0.3 - i * 0.025
+  });
+  const ring = new THREE.Mesh(geo, mat);
+  ring.rotation.x = Math.PI / 2 + (i * 0.12);
+  ring.rotation.y = i * 0.3;
+  mandala.add(ring);
+}
+scene.add(mandala);
+
+// Sacred geometry inner
+const sacredGroup = new THREE.Group();
+for (let i = 0; i < 6; i++) {
+  const angle = (i / 6) * Math.PI * 2;
+  const cx = Math.cos(angle) * 6;
+  const cy = Math.sin(angle) * 6;
+  const curve = new THREE.EllipseCurve(cx, cy, 3, 3, 0, Math.PI * 2, false, 0);
+  const pts = curve.getPoints(64);
+  const geo = new THREE.BufferGeometry().setFromPoints(pts.map(p => new THREE.Vector3(p.x, p.y, 0)));
+  const mat = new THREE.LineBasicMaterial({color: 0xF59E0B, transparent: true, opacity: 0.25});
+  sacredGroup.add(new THREE.Line(geo, mat));
+}
+mandala.add(sacredGroup);
+
+// ── MONKEY HEAD (geometric) ──
+const head = new THREE.Group();
+
+// Main cranium
+const craniumGeo = new THREE.SphereGeometry(8, 48, 48);
+const craniumMat = new THREE.MeshPhongMaterial({
+  color: 0x1a1040, emissive: 0x0a0520, shininess: 60,
+  specular: 0x00CED1, transparent: true, opacity: 0.85
+});
+const cranium = new THREE.Mesh(craniumGeo, craniumMat);
+cranium.scale.set(1, 1.15, 0.85);
+head.add(cranium);
+
+// Wireframe overlay
+const wireGeo = new THREE.SphereGeometry(8.2, 24, 24);
+const wireMat = new THREE.MeshBasicMaterial({color: 0x00CED1, wireframe: true, transparent: true, opacity: 0.08});
+const wireframe = new THREE.Mesh(wireGeo, wireMat);
+wireframe.scale.set(1, 1.15, 0.85);
+head.add(wireframe);
+
+// Ears
+function makeEar(x) {
+  const ear = new THREE.Group();
+  const outerGeo = new THREE.SphereGeometry(3, 24, 24);
+  const outerMat = new THREE.MeshPhongMaterial({
+    color: 0x0f0a25, emissive: 0x050210,
+    shininess: 40, specular: 0x8B5CF6
+  });
+  const outer = new THREE.Mesh(outerGeo, outerMat);
+  outer.scale.set(0.8, 1.1, 0.6);
+  ear.add(outer);
+
+  const innerGeo = new THREE.SphereGeometry(1.8, 16, 16);
+  const innerMat = new THREE.MeshPhongMaterial({
+    color: 0x1a1040, emissive: 0x0a0220,
+    shininess: 30
+  });
+  const inner = new THREE.Mesh(innerGeo, innerMat);
+  inner.scale.set(0.7, 1.1, 0.5);
+  inner.position.z = 0.5;
+  ear.add(inner);
+
+  ear.position.set(x, 2, -2);
+  return ear;
+}
+head.add(makeEar(-9.5));
+head.add(makeEar(9.5));
+
+// Eyes
+function makeEye(x) {
+  const eye = new THREE.Group();
+
+  const socketGeo = new THREE.SphereGeometry(2, 24, 24);
+  const socketMat = new THREE.MeshPhongMaterial({color: 0x050510, emissive: 0x010108});
+  const socket = new THREE.Mesh(socketGeo, socketMat);
+  socket.scale.set(1, 0.9, 0.5);
+  eye.add(socket);
+
+  const irisGeo = new THREE.SphereGeometry(1.2, 16, 16);
+  const irisMat = new THREE.MeshPhongMaterial({
+    color: 0x00CED1, emissive: 0x00CED1, emissiveIntensity: 2,
+    transparent: true, opacity: 0.9
+  });
+  const iris = new THREE.Mesh(irisGeo, irisMat);
+  iris.position.z = 0.8;
+  eye.add(iris);
+
+  const pupilGeo = new THREE.SphereGeometry(0.5, 12, 12);
+  const pupilMat = new THREE.MeshPhongMaterial({
+    color: 0xF59E0B, emissive: 0xF59E0B, emissiveIntensity: 1.5
+  });
+  const pupil = new THREE.Mesh(pupilGeo, pupilMat);
+  pupil.position.z = 1.3;
+  eye.add(pupil);
+
+  // Eye glow ring
+  const ringGeo = new THREE.TorusGeometry(2.2, 0.15, 8, 24);
+  const ringMat = new THREE.MeshBasicMaterial({color: 0x00CED1, transparent: true, opacity: 0.5});
+  const ring = new THREE.Mesh(ringGeo, ringMat);
+  ring.position.z = 0.3;
+  eye.add(ring);
+
+  eye.position.set(x, 1.5, 6);
+  eye.userData = {iris, pupil, ring, ringMat};
+  return eye;
+}
+const leftEye = makeEye(-3);
+const rightEye = makeEye(3);
+head.add(leftEye);
+head.add(rightEye);
+
+// Snout
+const snoutGeo = new THREE.SphereGeometry(2.5, 24, 24);
+const snoutMat = new THREE.MeshPhongMaterial({
+  color: 0x120d2b, emissive: 0x040210, shininess: 20
+});
+const snout = new THREE.Mesh(snoutGeo, snoutMat);
+snout.scale.set(1.1, 0.7, 0.6);
+snout.position.set(0, -2, 6.5);
+head.add(snout);
+
+// Nostrils
+for (let nx of [-0.7, 0.7]) {
+  const nGeo = new THREE.SphereGeometry(0.4, 8, 8);
+  const nMat = new THREE.MeshPhongMaterial({color: 0x050510});
+  const n = new THREE.Mesh(nGeo, nMat);
+  n.position.set(nx, -1.6, 7.2);
+  head.add(n);
+}
+
+// Mouth curve
+const mouthCurve = new THREE.QuadraticBezierCurve3(
+  new THREE.Vector3(-1.5, -3.5, 7), new THREE.Vector3(0, -4.5, 7.5), new THREE.Vector3(1.5, -3.5, 7)
+);
+const mouthPts = mouthCurve.getPoints(30);
+const mouthGeo = new THREE.BufferGeometry().setFromPoints(mouthPts);
+const mouthLine = new THREE.Line(mouthGeo, new THREE.LineBasicMaterial({color: 0xF59E0B}));
+head.add(mouthLine);
+
+// Crown (circuit headpiece)
+const crownGroup = new THREE.Group();
+for (let i = 0; i < 5; i++) {
+  const h = 1.5 + Math.random() * 2;
+  const barGeo = new THREE.BoxGeometry(0.8, h, 0.3);
+  const barMat = new THREE.MeshPhongMaterial({
+    color: 0x00CED1, emissive: 0x00CED1, emissiveIntensity: 0.4,
+    transparent: true, opacity: 0.7
+  });
+  const bar = new THREE.Mesh(barGeo, barMat);
+  bar.position.set((i - 2) * 2.5, 9, -1);
+  crownGroup.add(bar);
+
+  // Node on top
+  const nodeGeo = new THREE.SphereGeometry(0.35, 8, 8);
+  const nodeMat = new THREE.MeshPhongMaterial({
+    color: i === 2 ? 0xF59E0B : 0x00CED1,
+    emissive: i === 2 ? 0xF59E0B : 0x00CED1,
+    emissiveIntensity: 1
+  });
+  const node = new THREE.Mesh(nodeGeo, nodeMat);
+  node.position.set((i - 2) * 2.5, 9 + h / 2 + 0.5, -1);
+  crownGroup.add(node);
+  crownGroup.userData[`node${i}`] = {mesh: node, baseY: node.position.y};
+}
+head.add(crownGroup);
+
+// 3D ॐ above crown
+const omGeo = new THREE.TorusGeometry(0.8, 0.1, 8, 16);
+const omRing = new THREE.Mesh(omGeo, new THREE.MeshBasicMaterial({color: 0xF59E0B, transparent: true, opacity: 0.8}));
+omRing.position.set(0, 12.5, -1);
+head.add(omRing);
+
+scene.add(head);
+
+// ── PARTICLES ──
+const particlesGeo = new THREE.BufferGeometry();
+const particlesCount = 2000;
+const posArray = new Float32Array(particlesCount * 3);
+const colorArray = new Float32Array(particlesCount * 3);
+const colors = [new THREE.Color(0x00CED1), new THREE.Color(0x8B5CF6), new THREE.Color(0xF59E0B)];
+
+for (let i = 0; i < particlesCount; i++) {
+  const theta = Math.random() * Math.PI * 2;
+  const phi = Math.acos(2 * Math.random() - 1);
+  const r = 25 + Math.random() * 60;
+  posArray[i * 3] = r * Math.sin(phi) * Math.cos(theta);
+  posArray[i * 3 + 1] = r * Math.sin(phi) * Math.sin(theta);
+  posArray[i * 3 + 2] = r * Math.cos(phi);
+  const c = colors[Math.floor(Math.random() * colors.length)];
+  colorArray[i * 3] = c.r;
+  colorArray[i * 3 + 1] = c.g;
+  colorArray[i * 3 + 2] = c.b;
+}
+particlesGeo.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+particlesGeo.setAttribute('color', new THREE.BufferAttribute(colorArray, 3));
+
+const particlesMat = new THREE.PointsMaterial({
+  size: 0.15, vertexColors: true, blending: THREE.AdditiveBlending,
+  depthWrite: false, transparent: true, opacity: 0.6
+});
+const particlesMesh = new THREE.Points(particlesGeo, particlesMat);
+scene.add(particlesMesh);
+
+// ── DIGITAL RAIN RINGS ──
+const rainGroup = new THREE.Group();
+for (let j = 0; j < 3; j++) {
+  const rainGeo = new THREE.BufferGeometry();
+  const rainCount = 300;
+  const rainPos = new Float32Array(rainCount * 3);
+  const r = 35 + j * 15;
+  for (let i = 0; i < rainCount; i++) {
+    const angle = (i / rainCount) * Math.PI * 2;
+    const y = (Math.random() - 0.5) * 40;
+    rainPos[i * 3] = Math.cos(angle) * (r + Math.random() * 5);
+    rainPos[i * 3 + 1] = y;
+    rainPos[i * 3 + 2] = Math.sin(angle) * (r + Math.random() * 5);
+  }
+  rainGeo.setAttribute('position', new THREE.BufferAttribute(rainPos, 3));
+  const rainMat = new THREE.PointsMaterial({
+    size: 0.25, color: j === 1 ? 0x8B5CF6 : 0x00CED1,
+    blending: THREE.AdditiveBlending, depthWrite: false,
+    transparent: true, opacity: 0.2
+  });
+  const rainRing = new THREE.Points(rainGeo, rainMat);
+  rainRing.userData = {speed: 0.3 + j * 0.2};
+  rainGroup.add(rainRing);
+}
+scene.add(rainGroup);
+
+// ── MOUSE ──
+const mouse = new THREE.Vector2();
+const targetMouse = new THREE.Vector2();
+let mouseDown = false;
+
+window.addEventListener('mousemove', e => {
+  targetMouse.x = (e.clientX / innerWidth) * 2 - 1;
+  targetMouse.y = -(e.clientY / innerHeight) * 2 + 1;
+
+  const cursor = document.getElementById('cursor');
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top = e.clientY + 'px';
+});
+
+window.addEventListener('mousedown', () => {
+  mouseDown = true;
+  document.getElementById('cursor').classList.add('active');
+  // Burst particles
+  for (let i = 0; i < 100; i++) {
+    const idx = Math.floor(Math.random() * particlesCount);
+    const theta = Math.random() * Math.PI * 2;
+    const phi = Math.random() * Math.PI;
+    const r = 10 + Math.random() * 30;
+    posArray[idx * 3] = r * Math.sin(phi) * Math.cos(theta);
+    posArray[idx * 3 + 1] = r * Math.sin(phi) * Math.sin(theta);
+    posArray[idx * 3 + 2] = r * Math.cos(phi);
+  }
+  particlesGeo.attributes.position.needsUpdate = true;
+  setTimeout(() => {
+    mouseDown = false;
+    document.getElementById('cursor').classList.remove('active');
+  }, 300);
+});
+
+window.addEventListener('mouseup', () => {
+  mouseDown = false;
+  document.getElementById('cursor').classList.remove('active');
+});
+
+window.addEventListener('resize', () => {
+  camera.aspect = innerWidth / innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(innerWidth, innerHeight);
+});
+
+// ── TOUCH ──
+window.addEventListener('touchmove', e => {
+  targetMouse.x = (e.touches[0].clientX / innerWidth) * 2 - 1;
+  targetMouse.y = -(e.touches[0].clientY / innerHeight) * 2 + 1;
+});
+
+// ── ANIMATION ──
+const clock = new THREE.Clock();
+
+function animate() {
+  requestAnimationFrame(animate);
+  const t = clock.getElapsedTime();
+
+  // Smooth mouse follow
+  mouse.x += (targetMouse.x - mouse.x) * 0.05;
+  mouse.y += (targetMouse.y - mouse.y) * 0.05;
+
+  // Rotate mandala
+  mandala.rotation.z += 0.003;
+  mandala.rotation.x += 0.001;
+  sacredGroup.rotation.z -= 0.005;
+
+  // Rotate head gently
+  head.rotation.y = mouse.x * 0.5;
+  head.rotation.x = mouse.y * 0.2 + Math.sin(t * 0.3) * 0.1;
+  head.rotation.z = Math.sin(t * 0.5) * 0.05;
+
+  // Floating head
+  head.position.y = Math.sin(t * 0.8) * 1.2;
+
+  // Eye glow pulse
+  const glowIntensity = 1 + Math.sin(t * 3) * 0.4;
+  [leftEye, rightEye].forEach(eye => {
+    eye.userData.iris.material.emissiveIntensity = glowIntensity * 2;
+    eye.userData.ring.material.opacity = 0.3 + Math.sin(t * 3) * 0.2;
+  });
+
+  // Crown nodes bobbing
+  for (let i = 0; i < 5; i++) {
+    const nodeData = crownGroup.userData[`node${i}`];
+    if (nodeData) {
+      nodeData.mesh.position.y = nodeData.baseY + Math.sin(t * 2 + i) * 0.6;
+    }
+  }
+
+  // Om ring rotation
+  omRing.rotation.z += 0.02;
+  omRing.scale.setScalar(1 + Math.sin(t * 2) * 0.15);
+
+  // Particles rotation
+  particlesMesh.rotation.y += 0.0003;
+  particlesMesh.rotation.x += 0.0001;
+
+  // Digital rain
+  rainGroup.children.forEach(ring => {
+    ring.rotation.y += ring.userData.speed * 0.003;
+    ring.rotation.x += ring.userData.speed * 0.001;
+  });
+  rainGroup.rotation.y += 0.002;
+
+  // Point lights orbit
+  point2.position.x = Math.cos(t * 0.4) * 30;
+  point2.position.z = Math.sin(t * 0.4) * 20;
+  point3.position.x = Math.cos(t * 0.6 + 2) * 25;
+  point3.position.z = Math.sin(t * 0.6 + 2) * 25;
+
+  // Pulse light intensity
+  point1.intensity = 80 + Math.sin(t * 2) * 15;
+
+  renderer.render(scene, camera);
+}
+animate();
+</script>
+</body>
+</html>
