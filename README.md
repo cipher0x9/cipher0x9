@@ -113,7 +113,7 @@ Everything else stays **private**. Production secrets never belong in git.
 
 ### 📬 Connect
 
-- GitHub: [@CYPHER0X9](https://github.com/cipher0x9)
+- GitHub: **CYPHER0X9** · [@cipher0x9](https://github.com/cipher0x9)
 - Linktree: [linktr.ee/cyphermonkey](https://linktr.ee/cyphermonkey)
 - UC Lab: [uc-lab-free-university](https://github.com/cipher0x9/uc-lab-free-university)
 - AI Lab: [ai-lab-free-university](https://github.com/cipher0x9/ai-lab-free-university)
