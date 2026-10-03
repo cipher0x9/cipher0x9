@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="460" viewBox="0 0 800 460" role="img" aria-labelledby="ucTitle ucDesc">
+  <title id="ucTitle">UC Lab Free University</title>
+  <desc id="ucDesc">Offline campus for unified communications and contact center. 632 sections. Proof habit LICC. Release v20.2-resources.</desc>
+  <rect width="800" height="460" fill="#E7F6F1"/>
+  <rect width="800" height="12" fill="#0F6B58"/>
+  <text x="48" y="78" font-family="ui-sans-serif, system-ui, Segoe UI, Helvetica, Arial, sans-serif" font-size="15" letter-spacing="2.5" fill="#0C5344">UC LAB FREE UNIVERSITY</text>
+  <text x="48" y="138" font-family="ui-sans-serif, system-ui, Segoe UI, Helvetica, Arial, sans-serif" font-size="40" font-weight="700" fill="#1C2430">632 sections</text>
+  <text x="48" y="196" font-family="ui-sans-serif, system-ui, Segoe UI, Helvetica, Arial, sans-serif" font-size="22" fill="#1C2430">Unified communications and contact center.</text>
+  <text x="48" y="232" font-family="ui-sans-serif, system-ui, Segoe UI, Helvetica, Arial, sans-serif" font-size="22" fill="#1C2430">Multi-vendor study. One offline HTML file.</text>
+  <line x1="48" y1="280" x2="752" y2="280" stroke="#1C2430" stroke-opacity="0.15"/>
+  <g font-family="ui-sans-serif, system-ui, Segoe UI, Helvetica, Arial, sans-serif">
+    <text x="48" y="330" font-size="14" letter-spacing="1.5" fill="#0C5344">PROOF</text>
+    <text x="48" y="366" font-size="22" font-weight="700" fill="#1C2430">LICC</text>
+    <text x="48" y="398" font-size="16" fill="#1C2430">Leg, ID, Counter, Capture</text>
+    <text x="300" y="330" font-size="14" letter-spacing="1.5" fill="#0C5344">RELEASE</text>
+    <text x="300" y="366" font-size="22" font-weight="700" fill="#1C2430">v20.2-resources</text>
+    <text x="300" y="398" font-size="16" fill="#1C2430">Campus zip and briefing deck</text>
+    <text x="560" y="330" font-size="14" letter-spacing="1.5" fill="#0C5344">OPEN</text>
+    <text x="560" y="366" font-size="22" font-weight="700" fill="#1C2430">v17 HTML</text>
+    <text x="560" y="398" font-size="16" fill="#1C2430">Full browser, offline</text>
+  </g>
+</svg>

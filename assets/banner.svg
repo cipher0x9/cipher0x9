@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="460" viewBox="0 0 1280 460" role="img" aria-labelledby="bannerTitle bannerDesc">
+  <title id="bannerTitle">CYPHER0X9</title>
+  <desc id="bannerDesc">Pastel banner for cipher0x9. Free offline campuses for voice and contact center, AI engineering, and the science of meaning.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F3ECFF"/>
+      <stop offset="0.46" stop-color="#E5F6F0"/>
+      <stop offset="1" stop-color="#FFF1E6"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7ECFC0"/>
+      <stop offset="0.5" stop-color="#B1A8E6"/>
+      <stop offset="1" stop-color="#E8B89A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="460" fill="url(#sky)"/>
+  <circle cx="120" cy="64" r="150" fill="#E3D4FB"/>
+  <circle cx="1168" cy="400" r="190" fill="#F8D7C3"/>
+  <circle cx="690" cy="-40" r="120" fill="#D5F3E7"/>
+  <circle cx="1088" cy="78" r="42" fill="#F6E6B0" fill-opacity="0.85"/>
+  <circle cx="196" cy="400" r="26" fill="#F6C9D6" fill-opacity="0.8"/>
+  <rect x="230" y="108" width="820" height="188" rx="32" fill="#FFFCF8" fill-opacity="0.82"/>
+  <circle cx="612" cy="132" r="6" fill="#0F6B58"/>
+  <circle cx="640" cy="132" r="6" fill="#33308A"/>
+  <circle cx="668" cy="132" r="6" fill="#8A5A32"/>
+  <text x="640" y="162" text-anchor="middle" font-family="ui-sans-serif, system-ui, Segoe UI, Helvetica, Arial, sans-serif" font-size="16" letter-spacing="5" fill="#243044">cipher0x9</text>
+  <text x="640" y="230" text-anchor="middle" font-family="ui-sans-serif, system-ui, Segoe UI, Helvetica, Arial, sans-serif" font-size="68" font-weight="700" letter-spacing="3" fill="#1C2430">CYPHER0X9</text>
+  <text x="640" y="268" text-anchor="middle" font-family="ui-sans-serif, system-ui, Segoe UI, Helvetica, Arial, sans-serif" font-size="20" fill="#243044">Free offline campuses for careful study</text>
+  <g font-family="ui-sans-serif, system-ui, Segoe UI, Helvetica, Arial, sans-serif" font-size="17" text-anchor="middle">
+    <rect x="166" y="324" width="300" height="52" rx="26" fill="#D7F3EA"/>
+    <text x="316" y="356" fill="#0C5344">Voice and contact center</text>
+    <rect x="490" y="324" width="300" height="52" rx="26" fill="#E6E4FA"/>
+    <text x="640" y="356" fill="#2C2978">AI engineering</text>
+    <rect x="814" y="324" width="300" height="52" rx="26" fill="#F8E6D4"/>
+    <text x="964" y="356" fill="#6B3E1E">Science of meaning</text>
+  </g>
+  <text x="640" y="418" text-anchor="middle" font-family="ui-sans-serif, system-ui, Segoe UI, Helvetica, Arial, sans-serif" font-size="15" fill="#243044">Download a release. Unzip. Open the HTML in a full browser.</text>
+  <rect x="0" y="448" width="1280" height="12" fill="url(#bar)"/>
+</svg>

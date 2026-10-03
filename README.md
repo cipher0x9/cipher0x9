@@ -1,63 +1,45 @@
-<h1 align="center">🐵 CYPHER0X9</h1>
-
 <p align="center">
-  <strong>Free learning · Voice &amp; collaboration · Agents · Building carefully</strong>
+  <img src="assets/banner.svg" alt="cipher0x9. Free offline campuses for voice and contact center, AI engineering, and the science of meaning." width="100%">
 </p>
 
-<p align="center">
-  <a href="https://github.com/cipher0x9/uc-lab-free-university"><img src="https://img.shields.io/badge/🌿_UC_Lab-Free_University-0F9B8E?style=for-the-badge&labelColor=0B1220" alt="UC"/></a>
-  <a href="https://github.com/cipher0x9/ai-lab-free-university"><img src="https://img.shields.io/badge/🧠_AI_Lab-Free_University-6366F1?style=for-the-badge&labelColor=0B1220" alt="AI"/></a>
-  <a href="https://github.com/cipher0x9/ardham-shastra"><img src="https://img.shields.io/badge/🎓_Ardham-Shastra-8B5CF6?style=for-the-badge&labelColor=0B1220" alt="Ardham"/></a>
-  <a href="https://linktr.ee/cyphermonkey"><img src="https://img.shields.io/badge/🔗_Hub-Linktree-E8820C?style=for-the-badge&labelColor=0B1220" alt="Hub"/></a>
-</p>
+# cipher0x9
 
----
+Three free offline campuses. Download a zip, unzip it, and open the HTML file in Chrome, Safari, Edge, or Firefox.
 
-### Hello
+## Campuses
 
-I am **CYPHER0X9** — about a decade in **Cisco voice / collaboration**, still learning every day.
+<table>
+  <tr>
+    <td align="center" width="33%">
+      <a href="https://github.com/cipher0x9/uc-lab-free-university-mesmerizing"><img src="assets/card-uc.svg" alt="UC Lab Free University" width="100%"></a>
+    </td>
+    <td align="center" width="33%">
+      <a href="https://github.com/cipher0x9/ai-lab-free-university-mesmerizing"><img src="assets/card-ai.svg" alt="AI Lab Free University" width="100%"></a>
+    </td>
+    <td align="center" width="33%">
+      <a href="https://github.com/cipher0x9/ardham-shastra"><img src="assets/card-ardham.svg" alt="Ardham Shastra" width="100%"></a>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <strong><a href="https://github.com/cipher0x9/uc-lab-free-university-mesmerizing">UC Lab Free University</a></strong><br>
+      A free offline campus for unified communications and contact center. The curriculum is 632 sections across seven themes, and its proof habit is LICC: Leg, ID, Counter, Capture.
+      <br><br>
+      <a href="https://github.com/cipher0x9/uc-lab-free-university-mesmerizing/releases/download/v20.2-resources/v17-UNIVERSITY.html.zip">Campus download</a>
+    </td>
+    <td valign="top">
+      <strong><a href="https://github.com/cipher0x9/ai-lab-free-university-mesmerizing">AI Lab Free University</a></strong><br>
+      A free offline campus for AI engineering. It has 247 sections across mentor schools, and its proof habit is RTMA: Run, Trace, Metric, Artifact.
+      <br><br>
+      <a href="https://github.com/cipher0x9/ai-lab-free-university-mesmerizing/raw/main/zips/v2-UNIVERSITY.html.zip">Campus download</a>
+    </td>
+    <td valign="top">
+      <strong><a href="https://github.com/cipher0x9/ardham-shastra">Ardham Shastra</a></strong><br>
+      A free offline campus on the science of meaning. The notes index forty modules, and the method is Map, Grammar, Reason, Practice, Prove, Space, Teach.
+      <br><br>
+      <a href="https://github.com/cipher0x9/ardham-shastra/releases/download/v5-mastery/v1-ARDHAM-SHASTRA.html.zip">Campus download</a>
+    </td>
+  </tr>
+</table>
 
-I know what it feels like when training is incomplete, doors stay closed, and you want a clearer **path + proof** — not another badge alone.
-
-So I build **free universities** and share them with humility.
-
----
-
-### Featured free packs
-
-| | 🌿 UC Lab Free University | 🧠 AI Lab Free University | 🎓 Ardham Shastra |
-|--|--|--|--|
-| **For** | Voice · UC · Contact Center | AI learners & builders | Mastery method · learning science |
-| **Repo** | [uc-lab-free-university](https://github.com/cipher0x9/uc-lab-free-university) | [ai-lab-free-university](https://github.com/cipher0x9/ai-lab-free-university) | [ardham-shastra](https://github.com/cipher0x9/ardham-shastra) |
-| **Latest** | `v20.2-resources` · 632 sections | `v2` campus · 247 sections | `v5-mastery` |
-| **Download** | [Campus zip](https://github.com/cipher0x9/uc-lab-free-university/releases/download/v20.2-resources/v17-UNIVERSITY.html.zip) | [Campus zip](https://github.com/cipher0x9/ai-lab-free-university-mesmerizing/raw/main/zips/v2-UNIVERSITY.html.zip) | [Campus zip](https://github.com/cipher0x9/ardham-shastra/releases/download/v5-mastery/v1-ARDHAM-SHASTRA.html.zip) |
-| **Proof** | **LICC** — Leg · ID · Counter · Capture | **RTMA** — Run · Trace · Metric · Artifact | Śikṣā loop + RTMA/LICC habits |
-| **Open** | Chrome · Safari · Edge · Firefox (full browser) | Same | Same |
-
-**Also on UC:** [Enterprise Voice briefing deck (PPTX, 62 slides)](https://github.com/cipher0x9/uc-lab-free-university/releases/download/v20.2-resources/Enterprise-Voice-with-Cisco-Technologies-CC-Cloud-Migration.pptx)
-
-**Tip:** Desktop is smoothest. Phone works in a **full browser** (not in-app browsers). First open can take a moment. AI/Ardham campuses include export-to-PDF/Markdown from the UI.
-
-Hub for all free links: [linktr.ee/cyphermonkey](https://linktr.ee/cyphermonkey)
-
----
-
-### Public surface (small on purpose)
-
-Only these learning repos are public. Everything sensitive stays private.
-
----
-
-### Connect
-
-- GitHub: **[@cipher0x9](https://github.com/cipher0x9)** · display **CYPHER0X9**  
-- Linktree: [linktr.ee/cyphermonkey](https://linktr.ee/cyphermonkey)
-
-<p align="center">
-  <em>Build calmly. Prove carefully. Share freely for learning.</em>
-</p>
-
-
----
-
-_Public free universities last verified: 2026-08-10_
+[MIT](LICENSE) · [@cipher0x9](https://github.com/cipher0x9)
