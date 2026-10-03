@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="460" viewBox="0 0 800 460" role="img" aria-labelledby="arTitle arDesc">
+  <title id="arTitle">Ardham Shastra</title>
+  <desc id="arDesc">Offline campus on the science of meaning. The README indexes 40 modules and describes a 41-star universe map. Release v5-mastery.</desc>
+  <rect width="800" height="460" fill="#F8EFE6"/>
+  <rect width="800" height="12" fill="#8A5A32"/>
+  <text x="48" y="78" font-family="ui-sans-serif, system-ui, Segoe UI, Helvetica, Arial, sans-serif" font-size="15" letter-spacing="2.5" fill="#6B3E1E">ARDHAM SHASTRA</text>
+  <text x="48" y="138" font-family="ui-sans-serif, system-ui, Segoe UI, Helvetica, Arial, sans-serif" font-size="40" font-weight="700" fill="#1C2430">Science of meaning</text>
+  <text x="48" y="196" font-family="ui-sans-serif, system-ui, Segoe UI, Helvetica, Arial, sans-serif" font-size="22" fill="#1C2430">A free offline mastery campus.</text>
+  <text x="48" y="232" font-family="ui-sans-serif, system-ui, Segoe UI, Helvetica, Arial, sans-serif" font-size="22" fill="#1C2430">40 indexed modules. A 41-star map.</text>
+  <line x1="48" y1="280" x2="752" y2="280" stroke="#1C2430" stroke-opacity="0.15"/>
+  <g font-family="ui-sans-serif, system-ui, Segoe UI, Helvetica, Arial, sans-serif">
+    <text x="48" y="330" font-size="14" letter-spacing="1.5" fill="#6B3E1E">METHOD</text>
+    <text x="48" y="366" font-size="22" font-weight="700" fill="#1C2430">Seven steps</text>
+    <text x="48" y="398" font-size="16" fill="#1C2430">Map through Teach</text>
+    <text x="300" y="330" font-size="14" letter-spacing="1.5" fill="#6B3E1E">RELEASE</text>
+    <text x="300" y="366" font-size="22" font-weight="700" fill="#1C2430">v5-mastery</text>
+    <text x="300" y="398" font-size="16" fill="#1C2430">One campus zip</text>
+    <text x="560" y="330" font-size="14" letter-spacing="1.5" fill="#6B3E1E">OPEN</text>
+    <text x="560" y="366" font-size="22" font-weight="700" fill="#1C2430">v1 HTML</text>
+    <text x="560" y="398" font-size="16" fill="#1C2430">Full browser, offline</text>
+  </g>
+</svg>

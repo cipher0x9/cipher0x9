@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="460" viewBox="0 0 800 460" role="img" aria-labelledby="aiTitle aiDesc">
+  <title id="aiTitle">AI Lab Free University</title>
+  <desc id="aiDesc">Offline AI engineering campus. The README describes 247 sections and the RTMA proof habit. Release v4.0-free.</desc>
+  <rect width="800" height="460" fill="#EEEDFB"/>
+  <rect width="800" height="12" fill="#33308A"/>
+  <text x="48" y="78" font-family="ui-sans-serif, system-ui, Segoe UI, Helvetica, Arial, sans-serif" font-size="15" letter-spacing="2.5" fill="#33308A">AI LAB FREE UNIVERSITY</text>
+  <text x="48" y="138" font-family="ui-sans-serif, system-ui, Segoe UI, Helvetica, Arial, sans-serif" font-size="40" font-weight="700" fill="#1C2430">247 sections</text>
+  <text x="48" y="196" font-family="ui-sans-serif, system-ui, Segoe UI, Helvetica, Arial, sans-serif" font-size="22" fill="#1C2430">Offline campus for AI engineering.</text>
+  <text x="48" y="232" font-family="ui-sans-serif, system-ui, Segoe UI, Helvetica, Arial, sans-serif" font-size="22" fill="#1C2430">Local lab, APIs, retrieval, and evals.</text>
+  <line x1="48" y1="280" x2="752" y2="280" stroke="#1C2430" stroke-opacity="0.15"/>
+  <g font-family="ui-sans-serif, system-ui, Segoe UI, Helvetica, Arial, sans-serif">
+    <text x="48" y="330" font-size="14" letter-spacing="1.5" fill="#33308A">PROOF</text>
+    <text x="48" y="366" font-size="22" font-weight="700" fill="#1C2430">RTMA</text>
+    <text x="48" y="398" font-size="16" fill="#1C2430">Run, Trace, Metric, Artifact</text>
+    <text x="310" y="330" font-size="14" letter-spacing="1.5" fill="#33308A">RELEASE</text>
+    <text x="310" y="366" font-size="22" font-weight="700" fill="#1C2430">v4.0-free</text>
+    <text x="310" y="398" font-size="16" fill="#1C2430">Campus zip and starter slice</text>
+    <text x="580" y="330" font-size="14" letter-spacing="1.5" fill="#33308A">OPEN</text>
+    <text x="580" y="366" font-size="22" font-weight="700" fill="#1C2430">v2 HTML</text>
+    <text x="580" y="398" font-size="16" fill="#1C2430">Full browser, offline</text>
+  </g>
+</svg>
