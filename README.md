@@ -29,8 +29,8 @@ So I build **free universities** and share them with humility.
 |--|--|--|--|
 | **For** | Voice · UC · Contact Center | AI learners & builders | Mastery method · learning science |
 | **Repo** | [uc-lab-free-university](https://github.com/cipher0x9/uc-lab-free-university) | [ai-lab-free-university](https://github.com/cipher0x9/ai-lab-free-university) | [ardham-shastra](https://github.com/cipher0x9/ardham-shastra) |
-| **Latest** | `v20.2-resources` · 632 sections | `v4.2-mobile` · 431 lessons | `v5-mastery` |
-| **Download** | [Campus zip](https://github.com/cipher0x9/uc-lab-free-university/releases/download/v20.2-resources/v17-UNIVERSITY.html.zip) | [Campus zip](https://github.com/cipher0x9/ai-lab-free-university/releases/download/v4.2-mobile/v4-PORTFOLIO.html.zip) | [Campus zip](https://github.com/cipher0x9/ardham-shastra/releases/download/v5-mastery/v1-ARDHAM-SHASTRA.html.zip) |
+| **Latest** | `v20.2-resources` · 632 sections | `v2` campus · 247 sections | `v5-mastery` |
+| **Download** | [Campus zip](https://github.com/cipher0x9/uc-lab-free-university/releases/download/v20.2-resources/v17-UNIVERSITY.html.zip) | [Campus zip](https://github.com/cipher0x9/ai-lab-free-university-mesmerizing/raw/main/zips/v2-UNIVERSITY.html.zip) | [Campus zip](https://github.com/cipher0x9/ardham-shastra/releases/download/v5-mastery/v1-ARDHAM-SHASTRA.html.zip) |
 | **Proof** | **LICC** — Leg · ID · Counter · Capture | **RTMA** — Run · Trace · Metric · Artifact | Śikṣā loop + RTMA/LICC habits |
 | **Open** | Chrome · Safari · Edge · Firefox (full browser) | Same | Same |
 
