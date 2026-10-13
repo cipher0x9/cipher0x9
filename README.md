@@ -1,9 +1,24 @@
+<!--
+Add a public repo in under a minute.
+
+Categories, in this order: UC, AI, Research, Tools, Learning.
+Skip a category until it has a repo. Do not invent a row.
+
+1. Big campus (featured row). Copy one table cell. Two cells per row; start a new row for a third feature.
+   Point the banner, the Download link, and the Open link at the new repo, then rewrite the "What's inside" lines.
+2. Every repo, including featured ones, also gets a catalog row. Copy this line and fill it in:
+
+| Research | [Short name](REPO_URL) - one line on what it is | [Download](DOWNLOAD_URL) · [Open](REPO_URL) |
+
+If there is no file to download, link Open only.
+-->
+
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark) and (max-width: 640px)" srcset="./assets/hero-dark-narrow.svg">
     <source media="(max-width: 640px)" srcset="./assets/hero-light-narrow.svg">
     <source media="(prefers-color-scheme: dark)" srcset="./assets/hero-dark.svg">
-    <img src="./assets/hero-light.svg" alt="CYPHER0X9 — Curious learner · Free UC + AI universities · Share freely" width="100%">
+    <img src="./assets/hero-light.svg" alt="CYPHER0X9 — Curious learner · Free education from passion · Share freely" width="100%">
   </picture>
 </p>
 
@@ -15,11 +30,15 @@
 
 ## A free education
 
-I build free universities for people who want a real path, not a locked course. One campus is for voice, unified communications, and contact center. The other is for practical AI: local and cloud models, agents, and evals.
+UC and AI are the core of the work, not the fence around it. I learn, research, and share because the subject is interesting, and I want the result to stay free.
 
-Both are offline HTML files. There is no fee, no account, and no API key required to read them. The aim is to teach 99 or more learners, anywhere, and to leave the files easy to share again.
+The campuses are offline HTML files. There is no fee, no account, and no API key required to read them. The aim is to teach 99 or more learners, anywhere, and to leave the files easy to share again.
 
-## Two free universities
+## Projects and free downloads
+
+Two campuses are featured. The catalog under them is the full public list, so a later repo is one new row. Categories, in order: UC, AI, Research, Tools, and Learning.
+
+### Featured
 
 <table>
   <tr>
@@ -30,7 +49,7 @@ Both are offline HTML files. There is no fee, no account, and no API key require
       <br><br>
       A free offline campus for voice, unified communications, and contact center. Multi-vendor work, a clear path, and a habit of proof. One HTML file. No CDN.
       <br><br>
-      <a href="https://github.com/cipher0x9/uc-lab-free-university-mesmerizing/releases/download/v20.2-resources/v17-UNIVERSITY.html.zip"><img alt="Download the UC Lab campus zip" src="https://img.shields.io/badge/Download-Campus_zip-0F9B8E?style=for-the-badge&labelColor=0B1220"></a>
+      <a href="https://github.com/cipher0x9/uc-lab-free-university-mesmerizing/releases/download/v21.0/uc-lab-free-university.html.zip"><img alt="Download the UC Lab campus zip" src="https://img.shields.io/badge/Download-Campus_zip-0F9B8E?style=for-the-badge&labelColor=0B1220"></a>
       &nbsp;
       <a href="https://github.com/cipher0x9/uc-lab-free-university-mesmerizing"><img alt="Open the UC Lab repository" src="https://img.shields.io/badge/Open-Repository-0F9B8E?style=for-the-badge&logo=github&logoColor=white&labelColor=0B1220"></a>
       <br><br>
@@ -39,7 +58,7 @@ Both are offline HTML files. There is no fee, no account, and no API key require
         <li>632 sections and 7 themes: Warm, Night, Cobalt, Forest, Aurora, Sunset, Paper</li>
         <li>Mission Control dashboard, search, and an export center</li>
         <li>LICC proof: Leg, ID, Counter, Capture</li>
-        <li><a href="https://github.com/cipher0x9/uc-lab-free-university-mesmerizing/releases/tag/v20.2-resources">Enterprise Voice briefing</a>, 62 slides, on the same release</li>
+        <li><a href="https://github.com/cipher0x9/uc-lab-free-university-mesmerizing/releases/download/v21.0/Enterprise-Voice-with-Cisco-Technologies-CC-Cloud-Migration.pptx">Enterprise Voice briefing</a>, 62 slides</li>
       </ul>
     </td>
     <td width="50%" valign="top">
@@ -49,24 +68,39 @@ Both are offline HTML files. There is no fee, no account, and no API key require
       <br><br>
       A free offline campus for practical AI. Local and cloud study, agents, evals, and proof habits. Readable with no API keys. One HTML file. No CDN.
       <br><br>
-      <a href="https://github.com/cipher0x9/ai-lab-free-university-mesmerizing/raw/main/zips/v2-UNIVERSITY.html.zip"><img alt="Download the AI Lab campus zip" src="https://img.shields.io/badge/Download-Campus_zip-6366F1?style=for-the-badge&labelColor=0B1220"></a>
+      <a href="https://github.com/cipher0x9/ai-lab-free-university-mesmerizing/raw/main/downloads/ai-lab-university.html.zip"><img alt="Download the AI Lab campus zip" src="https://img.shields.io/badge/Download-Campus_zip-6366F1?style=for-the-badge&labelColor=0B1220"></a>
       &nbsp;
       <a href="https://github.com/cipher0x9/ai-lab-free-university-mesmerizing"><img alt="Open the AI Lab repository" src="https://img.shields.io/badge/Open-Repository-6366F1?style=for-the-badge&logo=github&logoColor=white&labelColor=0B1220"></a>
       <br><br>
       <strong>What's inside</strong>
       <ul>
-        <li>247 sections and 7 themes: Night, Cobalt, Aurora, Slate, Warm, Forest, Focus</li>
+        <li>259 sections, 17 schools, and 7 themes: Night, Cobalt, Aurora, Slate, Warm, Forest, Paper</li>
         <li>Local lab, cloud APIs, prompts, RAG, agents, voice AI, evals, and safety</li>
         <li>RTMA proof: Run, Trace, Metric, Artifact</li>
-        <li><a href="https://github.com/cipher0x9/ai-lab-free-university-mesmerizing/raw/main/zips/v1-SLICE.html.zip">Starter slice</a> for a short first visit</li>
+        <li><a href="https://github.com/cipher0x9/ai-lab-free-university-mesmerizing/raw/main/downloads/golden-slice.html.zip">Golden slice</a> for a short first visit</li>
       </ul>
     </td>
   </tr>
 </table>
 
-## Currently learning
+### Full catalog
 
-I am still a student. These are open studies, not finished claims.
+<p align="center">
+  <img alt="Category: UC" src="https://img.shields.io/badge/Category-UC-0F9B8E?style=for-the-badge&labelColor=0B1220">
+  <img alt="Category: AI" src="https://img.shields.io/badge/Category-AI-6366F1?style=for-the-badge&labelColor=0B1220">
+  <img alt="Category: Research" src="https://img.shields.io/badge/Category-Research-22C55E?style=for-the-badge&labelColor=0B1220">
+  <img alt="Category: Tools" src="https://img.shields.io/badge/Category-Tools-0B1220?style=for-the-badge&labelColor=22C55E">
+  <img alt="Category: Learning" src="https://img.shields.io/badge/Category-Learning-6366F1?style=for-the-badge&labelColor=0F9B8E">
+</p>
+
+| Category | Project | Get it |
+| --- | --- | --- |
+| UC | [UC Lab Free University](https://github.com/cipher0x9/uc-lab-free-university-mesmerizing) — 632 sections, offline voice, UC, and contact center | [Download](https://github.com/cipher0x9/uc-lab-free-university-mesmerizing/releases/download/v21.0/uc-lab-free-university.html.zip) · [Open](https://github.com/cipher0x9/uc-lab-free-university-mesmerizing) |
+| AI | [AI Lab Free University](https://github.com/cipher0x9/ai-lab-free-university-mesmerizing) — 259 sections, offline practical AI | [Download](https://github.com/cipher0x9/ai-lab-free-university-mesmerizing/raw/main/downloads/ai-lab-university.html.zip) · [Open](https://github.com/cipher0x9/ai-lab-free-university-mesmerizing) |
+
+## Currently exploring
+
+I am still a student. These are open studies, not finished claims. UC and AI stay at the center. Other threads are welcome when they are worth teaching for free. I follow them from passion, not from a fence around those two fields.
 
 <p align="center">
   <img alt="Exploring: Agentic AI" src="https://img.shields.io/badge/Exploring-Agentic_AI-6366F1?style=for-the-badge&labelColor=0B1220">
@@ -133,7 +167,7 @@ The campuses are the path. The diagram is only the shape of it.
 6. Keep proof as you practice.
    - **UC Lab — LICC:** Leg, ID, Counter, Capture.
    - **AI Lab — RTMA:** Run, Trace, Metric, Artifact.
-7. Want the short AI visit first? Use the [starter slice](https://github.com/cipher0x9/ai-lab-free-university-mesmerizing/raw/main/zips/v1-SLICE.html.zip). The UC [release](https://github.com/cipher0x9/uc-lab-free-university-mesmerizing/releases/tag/v20.2-resources) also includes a 62-slide Enterprise Voice briefing.
+7. Want the short AI visit first? Use the [golden slice](https://github.com/cipher0x9/ai-lab-free-university-mesmerizing/raw/main/downloads/golden-slice.html.zip). The UC release also includes the [Enterprise Voice briefing](https://github.com/cipher0x9/uc-lab-free-university-mesmerizing/releases/download/v21.0/Enterprise-Voice-with-Cisco-Technologies-CC-Cloud-Migration.pptx) (62 slides).
 
 </details>
 
