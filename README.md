@@ -1,16 +1,17 @@
 <!--
-Add a public repo in under a minute.
+How to add a public repository
 
-Categories, in this order: UC, AI, Research, Tools, Learning.
-Skip a category until it has a repo. Do not invent a row.
+Use categories in this order: UC, AI, Research, Tools, Learning.
+Skip a category until it has a public repository. Do not invent a row.
 
-1. Big campus (featured row). Copy one table cell. Two cells per row; start a new row for a third feature.
-   Point the banner, the Download link, and the Open link at the new repo, then rewrite the "What's inside" lines.
-2. Every repo, including featured ones, also gets a catalog row. Copy this line and fill it in:
+1. Featured campus. Copy one campus cell. A featured row is: campus, a narrow spacer cell, campus.
+   Start a new row for a third campus. If a row has only one campus, omit the spacer and the empty cell.
+   Point the banner, the Download link, and the Open link at the new repository, then rewrite the "What's inside" lines.
+2. Every repository, including a featured campus, also needs a catalog row:
 
-| Research | [Short name](REPO_URL) - one line on what it is | [Download](DOWNLOAD_URL) · [Open](REPO_URL) |
+| Research | [Short name](REPO_URL) — one sentence on what it is | [Download](DOWNLOAD_URL) · [Open](REPO_URL) |
 
-If there is no file to download, link Open only.
+If there is nothing to download, link Open only.
 -->
 
 <p align="center">
@@ -18,66 +19,69 @@ If there is no file to download, link Open only.
     <source media="(prefers-color-scheme: dark) and (max-width: 640px)" srcset="./assets/hero-dark-narrow.svg">
     <source media="(max-width: 640px)" srcset="./assets/hero-light-narrow.svg">
     <source media="(prefers-color-scheme: dark)" srcset="./assets/hero-dark.svg">
-    <img src="./assets/hero-light.svg" alt="CYPHER0X9 — Curious learner · Free education from passion · Share freely" width="100%">
+    <img src="./assets/hero-light.svg" alt="CYPHER0X9. Curious learner and Voice/UC engineer. I build free campuses for UC and AI, and I keep learning past those two fields." width="100%">
   </picture>
 </p>
 
 <p align="center">
-  <img alt="Status: Sharing freely" src="https://img.shields.io/badge/Status-Sharing_freely-22C55E?style=for-the-badge&labelColor=0B1220">
-  <img alt="Aim: 99 or more learners" src="https://img.shields.io/badge/Aim-99%2B_learners-0F9B8E?style=for-the-badge&labelColor=0B1220">
-  <img alt="Format: offline HTML" src="https://img.shields.io/badge/Format-Offline_HTML-6366F1?style=for-the-badge&labelColor=0B1220">
+  <img alt="Format: offline HTML" src="https://img.shields.io/badge/Format-Offline_HTML-4338CA?style=for-the-badge&labelColor=142033">
+  <img alt="Account: not required" src="https://img.shields.io/badge/Account-Not_required-B45309?style=for-the-badge&labelColor=142033">
+  <img alt="API key: not required" src="https://img.shields.io/badge/API_key-Not_required-6D28D9?style=for-the-badge&labelColor=142033">
 </p>
 
-## A free education
+---
 
-UC and AI are the core of the work, not the fence around it. I learn, research, and share because the subject is interesting, and I want the result to stay free.
+## About
 
-The campuses are offline HTML files. There is no fee, no account, and no API key required to read them. The aim is to teach 99 or more learners, anywhere, and to leave the files easy to share again.
+I am a Voice and unified communications engineer, and a curious learner. I build free campuses for UC and AI because the work interests me, and because I want other people to be able to study it for free.
+
+UC and AI are where I spend most of my time. When another subject is worth teaching clearly, I learn that too, and I share it the same way.
+
+Each campus is an offline HTML file. It is free to use, it does not ask for an account, and it does not need an API key. I would like at least 99 people to learn from them.
 
 ## Projects and free downloads
 
-Two campuses are featured. The catalog under them is the full public list, so a later repo is one new row. Categories, in order: UC, AI, Research, Tools, and Learning.
+The larger campuses are featured here. The table below is the full public list. Categories stay in this order: UC, AI, Research, Tools, and Learning.
 
 ### Featured
 
 <table>
   <tr>
-    <td width="50%" valign="top">
+    <td width="48%" valign="top">
       <a href="https://github.com/cipher0x9/uc-lab-free-university-mesmerizing">
         <img src="./assets/uc-banner.svg" alt="UC Lab Free University" width="100%">
       </a>
-      <br><br>
-      A free offline campus for voice, unified communications, and contact center. Multi-vendor work, a clear path, and a habit of proof. One HTML file. No CDN.
-      <br><br>
-      <a href="https://github.com/cipher0x9/uc-lab-free-university-mesmerizing/releases/download/v21.0/uc-lab-free-university.html.zip"><img alt="Download the UC Lab campus zip" src="https://img.shields.io/badge/Download-Campus_zip-0F9B8E?style=for-the-badge&labelColor=0B1220"></a>
-      &nbsp;
-      <a href="https://github.com/cipher0x9/uc-lab-free-university-mesmerizing"><img alt="Open the UC Lab repository" src="https://img.shields.io/badge/Open-Repository-0F9B8E?style=for-the-badge&logo=github&logoColor=white&labelColor=0B1220"></a>
-      <br><br>
-      <strong>What's inside</strong>
+      <p>A free offline campus for voice, unified communications, and contact center. It covers several vendors, and you can follow the material from start to finish. It is a single HTML file.</p>
+      <p>
+        <a href="https://github.com/cipher0x9/uc-lab-free-university-mesmerizing/releases/download/v21.0/uc-lab-free-university.html.zip"><img alt="Download the UC Lab campus" src="https://img.shields.io/badge/Download-HTML_file-0F766E?style=for-the-badge&labelColor=142033"></a>
+        &nbsp;
+        <a href="https://github.com/cipher0x9/uc-lab-free-university-mesmerizing"><img alt="Open the UC Lab repository" src="https://img.shields.io/badge/Open-Repository-0F766E?style=for-the-badge&logo=github&logoColor=white&labelColor=142033"></a>
+      </p>
+      <p><strong>What's inside</strong></p>
       <ul>
-        <li>632 sections and 7 themes: Warm, Night, Cobalt, Forest, Aurora, Sunset, Paper</li>
+        <li>632 sections, and seven themes: Warm, Night, Cobalt, Forest, Aurora, Sunset, and Paper</li>
         <li>Mission Control dashboard, search, and an export center</li>
-        <li>LICC proof: Leg, ID, Counter, Capture</li>
+        <li>A record of your checks, using LICC: Leg, ID, Counter, and Capture</li>
         <li><a href="https://github.com/cipher0x9/uc-lab-free-university-mesmerizing/releases/download/v21.0/Enterprise-Voice-with-Cisco-Technologies-CC-Cloud-Migration.pptx">Enterprise Voice briefing</a>, 62 slides</li>
       </ul>
     </td>
-    <td width="50%" valign="top">
+    <td width="4%"></td>
+    <td width="48%" valign="top">
       <a href="https://github.com/cipher0x9/ai-lab-free-university-mesmerizing">
         <img src="./assets/ai-banner.svg" alt="AI Lab Free University" width="100%">
       </a>
-      <br><br>
-      A free offline campus for practical AI. Local and cloud study, agents, evals, and proof habits. Readable with no API keys. One HTML file. No CDN.
-      <br><br>
-      <a href="https://github.com/cipher0x9/ai-lab-free-university-mesmerizing/raw/main/downloads/ai-lab-university.html.zip"><img alt="Download the AI Lab campus zip" src="https://img.shields.io/badge/Download-Campus_zip-6366F1?style=for-the-badge&labelColor=0B1220"></a>
-      &nbsp;
-      <a href="https://github.com/cipher0x9/ai-lab-free-university-mesmerizing"><img alt="Open the AI Lab repository" src="https://img.shields.io/badge/Open-Repository-6366F1?style=for-the-badge&logo=github&logoColor=white&labelColor=0B1220"></a>
-      <br><br>
-      <strong>What's inside</strong>
+      <p>A free offline campus for practical AI. It covers local tools, cloud tools, agents, and ways to check your work. You can read it without an API key. It is a single HTML file.</p>
+      <p>
+        <a href="https://github.com/cipher0x9/ai-lab-free-university-mesmerizing/raw/main/downloads/ai-lab-university.html.zip"><img alt="Download the AI Lab campus" src="https://img.shields.io/badge/Download-HTML_file-4338CA?style=for-the-badge&labelColor=142033"></a>
+        &nbsp;
+        <a href="https://github.com/cipher0x9/ai-lab-free-university-mesmerizing"><img alt="Open the AI Lab repository" src="https://img.shields.io/badge/Open-Repository-4338CA?style=for-the-badge&logo=github&logoColor=white&labelColor=142033"></a>
+      </p>
+      <p><strong>What's inside</strong></p>
       <ul>
-        <li>259 sections, 17 schools, and 7 themes: Night, Cobalt, Aurora, Slate, Warm, Forest, Paper</li>
-        <li>Local lab, cloud APIs, prompts, RAG, agents, voice AI, evals, and safety</li>
-        <li>RTMA proof: Run, Trace, Metric, Artifact</li>
-        <li><a href="https://github.com/cipher0x9/ai-lab-free-university-mesmerizing/raw/main/downloads/golden-slice.html.zip">Golden slice</a> for a short first visit</li>
+        <li>259 sections and 17 schools, with seven themes: Night, Cobalt, Aurora, Slate, Warm, Forest, and Paper</li>
+        <li>Local models, cloud APIs, prompts, retrieval, agents, voice AI, evaluation, and safety</li>
+        <li>A record of your checks, using RTMA: Run, Trace, Metric, and Artifact</li>
+        <li><a href="https://github.com/cipher0x9/ai-lab-free-university-mesmerizing/raw/main/downloads/golden-slice.html.zip">A shorter file for a first visit</a> (golden slice)</li>
       </ul>
     </td>
   </tr>
@@ -86,93 +90,93 @@ Two campuses are featured. The catalog under them is the full public list, so a 
 ### Full catalog
 
 <p align="center">
-  <img alt="Category: UC" src="https://img.shields.io/badge/Category-UC-0F9B8E?style=for-the-badge&labelColor=0B1220">
-  <img alt="Category: AI" src="https://img.shields.io/badge/Category-AI-6366F1?style=for-the-badge&labelColor=0B1220">
-  <img alt="Category: Research" src="https://img.shields.io/badge/Category-Research-22C55E?style=for-the-badge&labelColor=0B1220">
-  <img alt="Category: Tools" src="https://img.shields.io/badge/Category-Tools-0B1220?style=for-the-badge&labelColor=22C55E">
-  <img alt="Category: Learning" src="https://img.shields.io/badge/Category-Learning-6366F1?style=for-the-badge&labelColor=0F9B8E">
+  <img alt="Category: UC" src="https://img.shields.io/badge/Category-UC-0F766E?style=for-the-badge&labelColor=142033">
+  <img alt="Category: AI" src="https://img.shields.io/badge/Category-AI-4338CA?style=for-the-badge&labelColor=142033">
+  <img alt="Category: Research" src="https://img.shields.io/badge/Category-Research-B45309?style=for-the-badge&labelColor=142033">
+  <img alt="Category: Tools" src="https://img.shields.io/badge/Category-Tools-0369A1?style=for-the-badge&labelColor=142033">
+  <img alt="Category: Learning" src="https://img.shields.io/badge/Category-Learning-6D28D9?style=for-the-badge&labelColor=142033">
 </p>
 
-| Category | Project | Get it |
+| Category | Project | Links |
 | --- | --- | --- |
-| UC | [UC Lab Free University](https://github.com/cipher0x9/uc-lab-free-university-mesmerizing) — 632 sections, offline voice, UC, and contact center | [Download](https://github.com/cipher0x9/uc-lab-free-university-mesmerizing/releases/download/v21.0/uc-lab-free-university.html.zip) · [Open](https://github.com/cipher0x9/uc-lab-free-university-mesmerizing) |
-| AI | [AI Lab Free University](https://github.com/cipher0x9/ai-lab-free-university-mesmerizing) — 259 sections, offline practical AI | [Download](https://github.com/cipher0x9/ai-lab-free-university-mesmerizing/raw/main/downloads/ai-lab-university.html.zip) · [Open](https://github.com/cipher0x9/ai-lab-free-university-mesmerizing) |
+| UC | [UC Lab Free University](https://github.com/cipher0x9/uc-lab-free-university-mesmerizing) — Offline campus for voice, UC, and contact center. 632 sections. | [Download](https://github.com/cipher0x9/uc-lab-free-university-mesmerizing/releases/download/v21.0/uc-lab-free-university.html.zip) · [Open](https://github.com/cipher0x9/uc-lab-free-university-mesmerizing) |
+| AI | [AI Lab Free University](https://github.com/cipher0x9/ai-lab-free-university-mesmerizing) — Offline campus for practical AI. 259 sections. | [Download](https://github.com/cipher0x9/ai-lab-free-university-mesmerizing/raw/main/downloads/ai-lab-university.html.zip) · [Open](https://github.com/cipher0x9/ai-lab-free-university-mesmerizing) |
 
-## Currently exploring
+## What I am studying
 
-I am still a student. These are open studies, not finished claims. UC and AI stay at the center. Other threads are welcome when they are worth teaching for free. I follow them from passion, not from a fence around those two fields.
+These are subjects I am still learning, so I am not presenting them as finished work.
 
-<p align="center">
-  <img alt="Exploring: Agentic AI" src="https://img.shields.io/badge/Exploring-Agentic_AI-6366F1?style=for-the-badge&labelColor=0B1220">
-  <img alt="Exploring: Webex" src="https://img.shields.io/badge/Exploring-Webex-0F9B8E?style=for-the-badge&logo=webex&logoColor=white&labelColor=0B1220">
-  <img alt="Exploring: Contact Center" src="https://img.shields.io/badge/Exploring-Contact_Center-0F9B8E?style=for-the-badge&labelColor=0B1220">
-  <img alt="Exploring: Sanskrit computing" src="https://img.shields.io/badge/Exploring-Sanskrit_computing-6366F1?style=for-the-badge&labelColor=0B1220">
-</p>
-
-Agentic AI, Webex, contact center practice, and Sanskrit computing. I take them slowly, and I share a note only when it is clear enough to teach.
-
-## Tools around the work
-
-The campuses are plain HTML on purpose. These are the tools around that work.
+UC and AI still come first. I also work on other subjects when I can teach them clearly, and for free. At the moment those are AI agents, Webex, contact centers, and Sanskrit computing. I publish a note only when someone else could learn from it.
 
 <p align="center">
-  <img alt="SIP" src="https://img.shields.io/badge/Voice-SIP-0F9B8E?style=for-the-badge&labelColor=0B1220">
-  <img alt="WebRTC" src="https://img.shields.io/badge/WebRTC-0F9B8E?style=for-the-badge&logo=webrtc&logoColor=white&labelColor=0B1220">
-  <img alt="Wireshark" src="https://img.shields.io/badge/Wireshark-0F9B8E?style=for-the-badge&logo=wireshark&logoColor=white&labelColor=0B1220">
-  <img alt="Linux" src="https://img.shields.io/badge/Linux-0F9B8E?style=for-the-badge&logo=linux&logoColor=white&labelColor=0B1220">
-  <img alt="Bash" src="https://img.shields.io/badge/Bash-0F9B8E?style=for-the-badge&logo=gnubash&logoColor=white&labelColor=0B1220">
-  <br><br>
-  <img alt="Python" src="https://img.shields.io/badge/Python-6366F1?style=for-the-badge&logo=python&logoColor=white&labelColor=0B1220">
-  <img alt="HTML5" src="https://img.shields.io/badge/HTML5-6366F1?style=for-the-badge&logo=html5&logoColor=white&labelColor=0B1220">
-  <img alt="Markdown" src="https://img.shields.io/badge/Markdown-6366F1?style=for-the-badge&logo=markdown&logoColor=white&labelColor=0B1220">
-  <img alt="Git" src="https://img.shields.io/badge/Git-6366F1?style=for-the-badge&logo=git&logoColor=white&labelColor=0B1220">
-  <img alt="Ollama" src="https://img.shields.io/badge/Ollama-6366F1?style=for-the-badge&logo=ollama&logoColor=white&labelColor=0B1220">
+  <img alt="Studying: AI agents" src="https://img.shields.io/badge/Studying-AI_agents-4338CA?style=for-the-badge&labelColor=142033">
+  <img alt="Studying: Webex" src="https://img.shields.io/badge/Studying-Webex-0F766E?style=for-the-badge&logo=webex&logoColor=white&labelColor=142033">
+  <img alt="Studying: Contact center" src="https://img.shields.io/badge/Studying-Contact_center-0F766E?style=for-the-badge&labelColor=142033">
+  <img alt="Studying: Sanskrit computing" src="https://img.shields.io/badge/Studying-Sanskrit_computing-6D28D9?style=for-the-badge&labelColor=142033">
 </p>
 
-## A path you can walk
+## Tools I use
+
+The campuses are plain HTML, so a normal browser can open them, including offline. These are the tools I use while I build and study.
+
+<p align="center">
+  <img alt="SIP" src="https://img.shields.io/badge/Voice-SIP-0F766E?style=for-the-badge&labelColor=142033">
+  <img alt="WebRTC" src="https://img.shields.io/badge/WebRTC-0F766E?style=for-the-badge&logo=webrtc&logoColor=white&labelColor=142033">
+  <img alt="Wireshark" src="https://img.shields.io/badge/Wireshark-0F766E?style=for-the-badge&logo=wireshark&logoColor=white&labelColor=142033">
+  <img alt="Linux" src="https://img.shields.io/badge/Linux-0F766E?style=for-the-badge&logo=linux&logoColor=white&labelColor=142033">
+  <img alt="Bash" src="https://img.shields.io/badge/Bash-0F766E?style=for-the-badge&logo=gnubash&logoColor=white&labelColor=142033">
+</p>
+
+<p align="center">
+  <img alt="Python" src="https://img.shields.io/badge/Python-4338CA?style=for-the-badge&logo=python&logoColor=white&labelColor=142033">
+  <img alt="HTML5" src="https://img.shields.io/badge/HTML5-4338CA?style=for-the-badge&logo=html5&logoColor=white&labelColor=142033">
+  <img alt="Markdown" src="https://img.shields.io/badge/Markdown-4338CA?style=for-the-badge&logo=markdown&logoColor=white&labelColor=142033">
+  <img alt="Git" src="https://img.shields.io/badge/Git-4338CA?style=for-the-badge&logo=git&logoColor=white&labelColor=142033">
+  <img alt="Ollama" src="https://img.shields.io/badge/Ollama-4338CA?style=for-the-badge&logo=ollama&logoColor=white&labelColor=142033">
+</p>
+
+## A simple path
 
 ```mermaid
 flowchart TD
-    A["1 · Arrive curious"] --> B["2 · Choose a free campus"]
+    A["1. Start with a question"] --> B["2. Choose a campus"]
     B --> C["UC Lab<br/>voice, UC, contact center"]
-    B --> D["AI Lab<br/>local, cloud, agents, evals"]
-    C --> E["3 · Learn and keep proof<br/>LICC or RTMA"]
+    B --> D["AI Lab<br/>local, cloud, and agents"]
+    C --> E["3. Study and keep notes"]
     D --> E
-    E --> F["4 · Teach one more learner"]
-    F --> G["5 · Share the files freely"]
+    E --> F["4. Explain it to someone else"]
+    F --> G["5. Share a free copy"]
 
-    classDef ink fill:#0B1220,stroke:#0F9B8E,color:#F8FAFC
-    classDef uc fill:#0F9B8E,stroke:#0B1220,color:#F8FAFC
-    classDef ai fill:#6366F1,stroke:#0B1220,color:#F8FAFC
-    classDef done fill:#22C55E,stroke:#0B1220,color:#0B1220
+    classDef ink fill:#172033,stroke:#172033,color:#F8FAFC
+    classDef uc fill:#0F766E,stroke:#0F766E,color:#F8FAFC
+    classDef ai fill:#4338CA,stroke:#4338CA,color:#F8FAFC
 
-    class A,B,E,F ink
+    class A,B,E,F,G ink
     class C uc
     class D ai
-    class G done
 ```
 
-The campuses are the path. The diagram is only the shape of it.
+This is only a map. The lessons are in the campuses.
 
 <details>
-<summary><strong>How to use the labs</strong> — unzip, open, study offline</summary>
+<summary><strong>How to open a campus</strong></summary>
 
 <br>
 
-1. Pick a campus above and use **Download**.
+1. Choose a campus above and select **Download**.
 2. Unzip the file.
-3. Open the HTML in **Chrome, Safari, Edge, or Firefox**. Use the full browser, not an in-app browser.
-4. On a phone, the UC campus can take a short while the first time. Wait for it.
-5. Read offline. The campuses do not ask for an account or an API key.
-6. Keep proof as you practice.
-   - **UC Lab — LICC:** Leg, ID, Counter, Capture.
-   - **AI Lab — RTMA:** Run, Trace, Metric, Artifact.
-7. Want the short AI visit first? Use the [golden slice](https://github.com/cipher0x9/ai-lab-free-university-mesmerizing/raw/main/downloads/golden-slice.html.zip). The UC release also includes the [Enterprise Voice briefing](https://github.com/cipher0x9/uc-lab-free-university-mesmerizing/releases/download/v21.0/Enterprise-Voice-with-Cisco-Technologies-CC-Cloud-Migration.pptx) (62 slides).
+3. Open the HTML file in **Chrome, Safari, Edge, or Firefox**. Use the browser itself, not a page opened inside another app.
+4. On a phone, the UC campus can take a short time to open on the first visit. Let it finish loading.
+5. You can read offline. The campuses do not ask for an account or an API key.
+6. Keep a short record of what you checked.
+   - **UC Lab** uses LICC: Leg, ID, Counter, and Capture.
+   - **AI Lab** uses RTMA: Run, Trace, Metric, and Artifact.
+7. For a short first look at the AI campus, download the [golden slice](https://github.com/cipher0x9/ai-lab-free-university-mesmerizing/raw/main/downloads/golden-slice.html.zip). The UC release also includes the [Enterprise Voice briefing](https://github.com/cipher0x9/uc-lab-free-university-mesmerizing/releases/download/v21.0/Enterprise-Voice-with-Cisco-Technologies-CC-Cloud-Migration.pptx) (62 slides).
 
 </details>
 
 <details>
-<summary><strong>Remix them</strong> — clone, adapt, share again</summary>
+<summary><strong>Copy, adapt, and share</strong></summary>
 
 <br>
 
@@ -183,20 +187,14 @@ git clone https://github.com/cipher0x9/uc-lab-free-university-mesmerizing.git
 git clone https://github.com/cipher0x9/ai-lab-free-university-mesmerizing.git
 ```
 
-1. Translate a section, add a lab, or rebuild the path for learners you know.
-2. Keep the license file, and keep a link back to the original repository.
-3. Share your copy the same way: free, offline, and easy to open.
+1. Translate a section, add a lab, or adjust the path for the people you teach.
+2. Keep the license file, and keep a link to the original repository.
+3. Share your version for free, so someone else can open it offline.
 4. Leave out private data, customer dial plans, tokens, and API keys.
-5. This is educational material. It has no warranty. Read the official documentation before you change a live system.
+5. This is educational material, and it has no warranty. Read the official documentation before you change a live system.
 
 </details>
 
-<br>
-
 <p align="center">
-  <a href="https://github.com/cipher0x9"><img alt="GitHub @cipher0x9" src="https://img.shields.io/badge/GitHub-%40cipher0x9-0F9B8E?style=for-the-badge&logo=github&logoColor=white&labelColor=0B1220"></a>
-</p>
-
-<p align="center">
-  <em>Build calmly. Prove carefully. Share freely for learning.</em>
+  <a href="https://github.com/cipher0x9"><img alt="GitHub @cipher0x9" src="https://img.shields.io/badge/GitHub-%40cipher0x9-0F766E?style=for-the-badge&logo=github&logoColor=white&labelColor=142033"></a>
 </p>
