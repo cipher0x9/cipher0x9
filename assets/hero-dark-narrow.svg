@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="780" viewBox="0 0 720 780" role="img" aria-labelledby="heroTitle heroDesc">
+  <title id="heroTitle">CYPHER0X9</title>
+  <desc id="heroDesc">Curious learner. Free UC and AI universities. Share freely.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0B1220"/>
+      <stop offset="1" stop-color="#12182E"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.2" r="0.7">
+      <stop offset="0" stop-color="#0F9B8E" stop-opacity="0.20"/>
+      <stop offset="0.5" stop-color="#6366F1" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#0B1220" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0F9B8E"/>
+      <stop offset="0.5" stop-color="#0F9B8E"/>
+      <stop offset="0.5" stop-color="#6366F1"/>
+      <stop offset="1" stop-color="#6366F1"/>
+    </linearGradient>
+    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="1.2" cy="1.2" r="1.1" fill="#7DDED4" opacity="0.28"/>
+    </pattern>
+    <clipPath id="frame">
+      <rect x="2" y="2" width="716" height="776" rx="28"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#frame)">
+    <rect width="720" height="780" fill="url(#bg)"/>
+    <rect width="720" height="780" fill="url(#glow)"/>
+    <rect y="430" width="720" height="350" fill="url(#dots)"/>
+    <rect x="40" y="40" width="210" height="36" rx="18" fill="#10192B" stroke="#0F9B8E" stroke-width="1.5"/>
+    <circle cx="62" cy="58" r="5" fill="#22C55E"/>
+    <text x="78" y="63" fill="#F8FAFC" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="700">SHARING FREELY</text>
+    <text x="40" y="156" fill="#F8FAFC" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="60" font-weight="700">CYPHER0X9</text>
+    <rect x="40" y="178" width="148" height="5" rx="2.5" fill="url(#bar)"/>
+    <text x="40" y="236" fill="#E6EDF5" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="28" font-weight="500">Curious learner</text>
+    <text x="40" y="276" fill="#E6EDF5" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="28" font-weight="500">Free UC + AI universities</text>
+    <text x="40" y="316" fill="#E6EDF5" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="28" font-weight="500">Share freely</text>
+    <text x="40" y="364" fill="#B7C3D4" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="18">Teach 99+ learners. Pass the files on.</text>
+    <rect x="40" y="420" width="300" height="250" rx="18" fill="#0F9B8E"/>
+    <text x="190" y="520" text-anchor="middle" fill="#F8FAFC" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="36" font-weight="700">UC</text>
+    <text x="190" y="554" text-anchor="middle" fill="#04221F" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="16" font-weight="700">Free campus</text>
+    <rect x="118" y="586" width="144" height="6" rx="3" fill="#FFFFFF" opacity="0.9"/>
+    <rect x="118" y="604" width="100" height="6" rx="3" fill="#FFFFFF" opacity="0.55"/>
+    <rect x="380" y="420" width="300" height="250" rx="18" fill="#6366F1"/>
+    <text x="530" y="520" text-anchor="middle" fill="#F8FAFC" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="36" font-weight="700">AI</text>
+    <text x="530" y="554" text-anchor="middle" fill="#1E1B4B" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="16" font-weight="700">Free campus</text>
+    <rect x="458" y="586" width="144" height="6" rx="3" fill="#FFFFFF" opacity="0.9"/>
+    <rect x="458" y="604" width="100" height="6" rx="3" fill="#FFFFFF" opacity="0.55"/>
+    <rect x="40" y="710" width="640" height="6" rx="3" fill="url(#bar)"/>
+  </g>
+  <rect x="2" y="2" width="716" height="776" rx="28" fill="none" stroke="#243044" stroke-width="2"/>
+</svg>
