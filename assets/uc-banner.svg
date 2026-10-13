@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="168" viewBox="0 0 760 168" role="img" aria-labelledby="ucTitle ucDesc">
+  <title id="ucTitle">UC Lab Free University</title>
+  <desc id="ucDesc">Free offline campus for voice, unified communications, and contact center. 632 sections.</desc>
+  <clipPath id="frame">
+    <rect x="2" y="2" width="756" height="164" rx="18"/>
+  </clipPath>
+  <g clip-path="url(#frame)">
+  <rect width="760" height="168" fill="#0B1220"/>
+  <rect width="8" height="168" fill="#0F9B8E"/>
+  <text x="36" y="58" fill="#8EE0D6" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="700">VOICE · UC · CONTACT CENTER</text>
+  <text x="36" y="112" fill="#F8FAFC" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="40" font-weight="700">UC Lab</text>
+  <text x="720" y="96" text-anchor="end" fill="#F8FAFC" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="32" font-weight="700">632</text>
+  <text x="720" y="120" text-anchor="end" fill="#B7C3D4" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="14">sections</text>
+  </g>
+  <rect x="2" y="2" width="756" height="164" rx="18" fill="none" stroke="#0F9B8E" stroke-width="2"/>
+</svg>
