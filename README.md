@@ -53,16 +53,16 @@ The larger campuses are featured here. The table below is the full public list. 
       </a>
       <p>A free offline campus for voice, unified communications, and contact center. It covers several vendors, and you can follow the material from start to finish. It is a single HTML file.</p>
       <p>
-        <a href="https://github.com/cipher0x9/uc-lab-free-university-mesmerizing/releases/download/v21.0/uc-lab-free-university.html.zip"><img alt="Download the UC Lab campus" src="https://img.shields.io/badge/Download-HTML_file-0F766E?style=for-the-badge&labelColor=142033"></a>
+        <a href="https://github.com/cipher0x9/uc-lab-free-university-mesmerizing/releases/download/v22.0/uc-lab-free-university.html.zip"><img alt="Download the UC Lab campus" src="https://img.shields.io/badge/Download-HTML_file-0F766E?style=for-the-badge&labelColor=142033"></a>
         &nbsp;
         <a href="https://github.com/cipher0x9/uc-lab-free-university-mesmerizing"><img alt="Open the UC Lab repository" src="https://img.shields.io/badge/Open-Repository-0F766E?style=for-the-badge&logo=github&logoColor=white&labelColor=142033"></a>
       </p>
       <p><strong>What's inside</strong></p>
       <ul>
-        <li>632 sections, and seven themes: Warm, Night, Cobalt, Forest, Aurora, Sunset, and Paper</li>
+        <li>476 sections in 14 tracks. The file in the repo is <a href="https://github.com/cipher0x9/uc-lab-free-university-mesmerizing/blob/main/campus/uc-lab-free-university.html">campus/uc-lab-free-university.html</a></li>
         <li>Mission Control dashboard, search, and an export center</li>
         <li>A record of your checks, using LICC: Leg, ID, Counter, and Capture</li>
-        <li><a href="https://github.com/cipher0x9/uc-lab-free-university-mesmerizing/releases/download/v21.0/Enterprise-Voice-with-Cisco-Technologies-CC-Cloud-Migration.pptx">Enterprise Voice briefing</a>, 62 slides</li>
+        <li><a href="https://github.com/cipher0x9/uc-lab-free-university-mesmerizing/releases/download/v22.0/Enterprise-Voice-with-Cisco-Technologies-CC-Cloud-Migration.pptx">Enterprise Voice briefing</a>, 62 slides</li>
       </ul>
     </td>
     <td width="4%"></td>
@@ -78,7 +78,7 @@ The larger campuses are featured here. The table below is the full public list. 
       </p>
       <p><strong>What's inside</strong></p>
       <ul>
-        <li>259 sections and 17 schools, with seven themes: Night, Cobalt, Aurora, Slate, Warm, Forest, and Paper</li>
+        <li>128 lessons in 14 tracks. The file in the repo is <a href="https://github.com/cipher0x9/ai-lab-free-university-mesmerizing/blob/main/campus/ai-lab-university.html">campus/ai-lab-university.html</a></li>
         <li>Local models, cloud APIs, prompts, retrieval, agents, voice AI, evaluation, and safety</li>
         <li>A record of your checks, using RTMA: Run, Trace, Metric, and Artifact</li>
         <li><a href="https://github.com/cipher0x9/ai-lab-free-university-mesmerizing/raw/main/downloads/golden-slice.html.zip">A shorter file for a first visit</a> (golden slice)</li>
@@ -99,8 +99,8 @@ The larger campuses are featured here. The table below is the full public list. 
 
 | Category | Project | Links |
 | --- | --- | --- |
-| UC | [UC Lab Free University](https://github.com/cipher0x9/uc-lab-free-university-mesmerizing) — Offline campus for voice, UC, and contact center. 632 sections. | [Download](https://github.com/cipher0x9/uc-lab-free-university-mesmerizing/releases/download/v21.0/uc-lab-free-university.html.zip) · [Open](https://github.com/cipher0x9/uc-lab-free-university-mesmerizing) |
-| AI | [AI Lab Free University](https://github.com/cipher0x9/ai-lab-free-university-mesmerizing) — Offline campus for practical AI. 259 sections. | [Download](https://github.com/cipher0x9/ai-lab-free-university-mesmerizing/raw/main/downloads/ai-lab-university.html.zip) · [Open](https://github.com/cipher0x9/ai-lab-free-university-mesmerizing) |
+| UC | [UC Lab Free University](https://github.com/cipher0x9/uc-lab-free-university-mesmerizing) — Offline campus for voice, UC, and contact center. 476 sections in 14 tracks. | [Download](https://github.com/cipher0x9/uc-lab-free-university-mesmerizing/releases/download/v22.0/uc-lab-free-university.html.zip) · [Open](https://github.com/cipher0x9/uc-lab-free-university-mesmerizing) |
+| AI | [AI Lab Free University](https://github.com/cipher0x9/ai-lab-free-university-mesmerizing) — Offline campus for practical AI. 128 lessons in 14 tracks. | [Download](https://github.com/cipher0x9/ai-lab-free-university-mesmerizing/raw/main/downloads/ai-lab-university.html.zip) · [Open](https://github.com/cipher0x9/ai-lab-free-university-mesmerizing) |
 
 ## What I am studying
 
@@ -171,7 +171,7 @@ This is only a map. The lessons are in the campuses.
 6. Keep a short record of what you checked.
    - **UC Lab** uses LICC: Leg, ID, Counter, and Capture.
    - **AI Lab** uses RTMA: Run, Trace, Metric, and Artifact.
-7. For a short first look at the AI campus, download the [golden slice](https://github.com/cipher0x9/ai-lab-free-university-mesmerizing/raw/main/downloads/golden-slice.html.zip). The UC release also includes the [Enterprise Voice briefing](https://github.com/cipher0x9/uc-lab-free-university-mesmerizing/releases/download/v21.0/Enterprise-Voice-with-Cisco-Technologies-CC-Cloud-Migration.pptx) (62 slides).
+7. For a short first look at the AI campus, download the [golden slice](https://github.com/cipher0x9/ai-lab-free-university-mesmerizing/raw/main/downloads/golden-slice.html.zip). The UC release also includes the [Enterprise Voice briefing](https://github.com/cipher0x9/uc-lab-free-university-mesmerizing/releases/download/v22.0/Enterprise-Voice-with-Cisco-Technologies-CC-Cloud-Migration.pptx) (62 slides).
 
 </details>
 
