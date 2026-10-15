@@ -23,7 +23,7 @@
 
 <ul>
 <li>🐒 I'm <b>Lucky, aka Cypher Monkey</b>, an independent builder and volunteer educator.</li>
-<li>🧪 I run <b>CypherMonkeyLabs</b>: ten free labs across UC, CCaaS, SIP, AI and Gemini Gems.</li>
+<li>🧪 I run <b>CypherMonkeyLabs</b>: nine free labs across UC, CCaaS, SIP and AI, plus a free Gemini Gems gallery.</li>
 <li>🎓 My belief: <b>learning should be free for everyone</b>.</li>
 <li>🌐 Home base: <a href="https://cyphermonkeylabs.com">cyphermonkeylabs.com</a></li>
 <li>💬 Ask me about voice, contact centers, SIP, AI and teaching by building.</li>
@@ -39,18 +39,17 @@
 
 <div align="center"><img src="assets/iso-scene.svg" width="900" alt="Isometric scene"></div>
 
-## 🧪 Ten Free Labs
+## 🧪 Nine Free Labs
 
 <div align="center">
 
 <table>
-<tr><td align="center"><a href="https://cipher0x9.github.io/uc-lab-free-university-mesmerizing/"><img src="assets/lab-01.svg" width="440" alt="UC Lab"></a></td><td align="center"><a href="https://cipher0x9.github.io/ai-lab-free-university-mesmerizing/"><img src="assets/lab-02.svg" width="440" alt="AI Lab"></a></td></tr>
-<tr><td align="center"><a href="https://cipher0x9.github.io/amazon-connect-lab-free-university-mesmerizing/"><img src="assets/lab-03.svg" width="440" alt="Amazon Connect Lab"></a></td><td align="center"><a href="https://cipher0x9.github.io/microsoft-voice-cc-lab-free-university-mesmerizing/"><img src="assets/lab-04.svg" width="440" alt="Microsoft Voice & CC"></a></td></tr>
-<tr><td align="center"><a href="https://cipher0x9.github.io/webex-lab-free-university-mesmerizing/"><img src="assets/lab-05.svg" width="440" alt="Webex Lab"></a></td><td align="center"><a href="https://cipher0x9.github.io/five9-lab-free-university-mesmerizing/"><img src="assets/lab-06.svg" width="440" alt="Five9 Lab"></a></td></tr>
-<tr><td align="center"><a href="https://cipher0x9.github.io/genesys-cloud-lab-free-university-mesmerizing/"><img src="assets/lab-07.svg" width="440" alt="Genesys Cloud Lab"></a></td><td align="center"><a href="https://cipher0x9.github.io/nice-cxone-lab-free-university-mesmerizing/"><img src="assets/lab-08.svg" width="440" alt="NICE CXone Lab"></a></td></tr>
-<tr><td align="center"><a href="https://cipher0x9.github.io/sip-universe-lab-free-university-mesmerizing/"><img src="assets/lab-09.svg" width="440" alt="SIP Universe Lab"></a></td><td align="center"><a href="https://cipher0x9.github.io/gemini-gems-free-gallery/"><img src="assets/lab-10.svg" width="440" alt="Gemini Gems"></a></td></tr>
-<tr><td align="center"><img src="assets/slot-1.svg" width="440" alt="More labs coming soon"></td><td align="center"><img src="assets/slot-2.svg" width="440" alt="More labs coming soon"></td></tr>
+<tr><td align="center" width="33%"><a href="https://cipher0x9.github.io/uc-lab-free-university-mesmerizing/"><img src="assets/lab-01.svg" width="330" alt="UC Lab"></a><br><sub>📦 <a href="https://github.com/cipher0x9/uc-lab-free-university-mesmerizing">repo</a> · 🚀 <a href="https://cipher0x9.github.io/uc-lab-free-university-mesmerizing/">live app</a></sub></td><td align="center" width="33%"><a href="https://cipher0x9.github.io/amazon-connect-lab-free-university-mesmerizing/campus/"><img src="assets/lab-03.svg" width="330" alt="Amazon Connect Lab"></a><br><sub>📦 <a href="https://github.com/cipher0x9/amazon-connect-lab-free-university-mesmerizing">repo</a> · 🚀 <a href="https://cipher0x9.github.io/amazon-connect-lab-free-university-mesmerizing/campus/">live app</a></sub></td><td align="center" width="33%"><a href="https://cipher0x9.github.io/microsoft-voice-cc-lab-free-university-mesmerizing/campus/"><img src="assets/lab-04.svg" width="330" alt="Microsoft Voice & CC Lab"></a><br><sub>📦 <a href="https://github.com/cipher0x9/microsoft-voice-cc-lab-free-university-mesmerizing">repo</a> · 🚀 <a href="https://cipher0x9.github.io/microsoft-voice-cc-lab-free-university-mesmerizing/campus/">live app</a></sub></td></tr>
+<tr><td align="center" width="33%"><a href="https://cipher0x9.github.io/webex-lab-free-university-mesmerizing/"><img src="assets/lab-05.svg" width="330" alt="Webex Lab"></a><br><sub>📦 <a href="https://github.com/cipher0x9/webex-lab-free-university-mesmerizing">repo</a> · 🚀 <a href="https://cipher0x9.github.io/webex-lab-free-university-mesmerizing/">live app</a></sub></td><td align="center" width="33%"><a href="https://cipher0x9.github.io/five9-lab-free-university-mesmerizing/campus/"><img src="assets/lab-06.svg" width="330" alt="Five9 Lab"></a><br><sub>📦 <a href="https://github.com/cipher0x9/five9-lab-free-university-mesmerizing">repo</a> · 🚀 <a href="https://cipher0x9.github.io/five9-lab-free-university-mesmerizing/campus/">live app</a></sub></td><td align="center" width="33%"><a href="https://cipher0x9.github.io/genesys-cloud-lab-free-university-mesmerizing/campus/"><img src="assets/lab-07.svg" width="330" alt="Genesys Cloud Lab"></a><br><sub>📦 <a href="https://github.com/cipher0x9/genesys-cloud-lab-free-university-mesmerizing">repo</a> · 🚀 <a href="https://cipher0x9.github.io/genesys-cloud-lab-free-university-mesmerizing/campus/">live app</a></sub></td></tr>
+<tr><td align="center" width="33%"><a href="https://cipher0x9.github.io/nice-cxone-lab-free-university-mesmerizing/campus/"><img src="assets/lab-08.svg" width="330" alt="NICE CXone Lab"></a><br><sub>📦 <a href="https://github.com/cipher0x9/nice-cxone-lab-free-university-mesmerizing">repo</a> · 🚀 <a href="https://cipher0x9.github.io/nice-cxone-lab-free-university-mesmerizing/campus/">live app</a></sub></td><td align="center" width="33%"><a href="https://cipher0x9.github.io/sip-universe-lab-free-university-mesmerizing/campus/"><img src="assets/lab-09.svg" width="330" alt="SIP Universe Lab"></a><br><sub>📦 <a href="https://github.com/cipher0x9/sip-universe-lab-free-university-mesmerizing">repo</a> · 🚀 <a href="https://cipher0x9.github.io/sip-universe-lab-free-university-mesmerizing/campus/">live app</a></sub></td><td align="center" width="33%"><a href="https://cipher0x9.github.io/ai-lab-free-university-mesmerizing/campus/ai-lab-university.html"><img src="assets/lab-02.svg" width="330" alt="AI Lab"></a><br><sub>📦 <a href="https://github.com/cipher0x9/ai-lab-free-university-mesmerizing">repo</a> · 🚀 <a href="https://cipher0x9.github.io/ai-lab-free-university-mesmerizing/campus/ai-lab-university.html">live app</a></sub></td></tr>
 </table>
+
+<sub>➕ Also: the free <a href="https://cipher0x9.github.io/gemini-gems-free-gallery/">Gemini Gems gallery</a></sub>
 
 </div>
 
@@ -102,7 +101,7 @@
 
 <div align="center">
 
-<a href="https://cyphermonkeylabs.com"><img src="https://img.shields.io/badge/📬_Contact_me-cyphermonkeylabs.com-ff2bd6?style=for-the-badge" alt="Contact"></a>
+<a href="https://cyphermonkeylabs.com/#contact"><img src="https://img.shields.io/badge/📬_Contact_me-cyphermonkeylabs.com-ff2bd6?style=for-the-badge" alt="Contact"></a>
 
 <a href="https://cyphermonkeylabs.com"><img src="https://img.shields.io/badge/Website-00f0ff?style=for-the-badge&logo=googlechrome&logoColor=black" alt="Website"></a> <a href="https://linktr.ee/cyphermonkey"><img src="https://img.shields.io/badge/Linktree-43E55E?style=for-the-badge&logo=linktree&logoColor=black" alt="Linktree"></a> <a href="https://dev.to/cyphermonkey"><img src="https://img.shields.io/badge/DEV-0A0A0A?style=for-the-badge&logo=devdotto&logoColor=white" alt="DEV"></a> <a href="https://huggingface.co/Cypher0x9"><img src="https://img.shields.io/badge/Hugging_Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black" alt="Hugging_Face"></a> <a href="https://x.com/Cypher0x9"><img src="https://img.shields.io/badge/X_@Cypher0x9-000000?style=for-the-badge&logo=x&logoColor=white" alt="X_@Cypher0x9"></a>
 
