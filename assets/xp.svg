@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="330" viewBox="0 0 1000 330"><defs><filter id="gl" x="-10%" y="-100%" width="120%" height="300%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<rect x="2" y="2" width="996" height="326" rx="20" fill="#120640" stroke="#ffe600" stroke-opacity=".6" stroke-width="2"/>
+<text x="40" y="40" font-family="'Fira Code','JetBrains Mono',Consolas,'Courier New',monospace" font-size="20" font-weight="800" fill="#ffe600" letter-spacing="3">⚡ LEARNING PATHS · LEVEL UP</text>
+<text x="960" y="40" text-anchor="end" font-family="'Fira Code','JetBrains Mono',Consolas,'Courier New',monospace" font-size="13" fill="#8fa8ff">always leveling · no end screen</text><text x="40" y="86" font-family="'Fira Code','JetBrains Mono',Consolas,'Courier New',monospace" font-size="15" font-weight="700" fill="#00f0ff">UC &amp; VOICE</text>
+<rect x="260" y="70" width="470" height="22" rx="11" fill="#0a0420" stroke="#00f0ff" stroke-opacity=".6"/>
+<rect x="263" y="73" width="0" height="16" rx="8" fill="#00f0ff" filter="url(#gl)"><animate attributeName="width" values="0;464;464;0" keyTimes="0;.6;.9;1" dur="7s" begin="0.0s" repeatCount="indefinite"/></rect>
+<rect x="263" y="74" width="464" height="5" rx="3" fill="#fff" opacity=".22"/>
+<line x1="416.66666666666663" y1="67" x2="416.66666666666663" y2="95" stroke="#fff" stroke-opacity=".5"/><line x1="573.3333333333333" y1="67" x2="573.3333333333333" y2="95" stroke="#fff" stroke-opacity=".5"/>
+<text x="750" y="87" font-family="'Fira Code','JetBrains Mono',Consolas,'Courier New',monospace" font-size="13" fill="#fff">ROOKIE ▸ PRO ▸ MASTER</text><text x="40" y="138" font-family="'Fira Code','JetBrains Mono',Consolas,'Courier New',monospace" font-size="15" font-weight="700" fill="#ff9900">CONTACT CENTER</text>
+<rect x="260" y="122" width="470" height="22" rx="11" fill="#0a0420" stroke="#ff9900" stroke-opacity=".6"/>
+<rect x="263" y="125" width="0" height="16" rx="8" fill="#ff9900" filter="url(#gl)"><animate attributeName="width" values="0;464;464;0" keyTimes="0;.6;.9;1" dur="8s" begin="0.5s" repeatCount="indefinite"/></rect>
+<rect x="263" y="126" width="464" height="5" rx="3" fill="#fff" opacity=".22"/>
+<line x1="416.66666666666663" y1="119" x2="416.66666666666663" y2="147" stroke="#fff" stroke-opacity=".5"/><line x1="573.3333333333333" y1="119" x2="573.3333333333333" y2="147" stroke="#fff" stroke-opacity=".5"/>
+<text x="750" y="139" font-family="'Fira Code','JetBrains Mono',Consolas,'Courier New',monospace" font-size="13" fill="#fff">ROOKIE ▸ PRO ▸ MASTER</text><text x="40" y="190" font-family="'Fira Code','JetBrains Mono',Consolas,'Courier New',monospace" font-size="15" font-weight="700" fill="#7cff6b">SIP &amp; PROTOCOLS</text>
+<rect x="260" y="174" width="470" height="22" rx="11" fill="#0a0420" stroke="#7cff6b" stroke-opacity=".6"/>
+<rect x="263" y="177" width="0" height="16" rx="8" fill="#7cff6b" filter="url(#gl)"><animate attributeName="width" values="0;464;464;0" keyTimes="0;.6;.9;1" dur="9s" begin="1.0s" repeatCount="indefinite"/></rect>
+<rect x="263" y="178" width="464" height="5" rx="3" fill="#fff" opacity=".22"/>
+<line x1="416.66666666666663" y1="171" x2="416.66666666666663" y2="199" stroke="#fff" stroke-opacity=".5"/><line x1="573.3333333333333" y1="171" x2="573.3333333333333" y2="199" stroke="#fff" stroke-opacity=".5"/>
+<text x="750" y="191" font-family="'Fira Code','JetBrains Mono',Consolas,'Courier New',monospace" font-size="13" fill="#fff">ROOKIE ▸ PRO ▸ MASTER</text><text x="40" y="242" font-family="'Fira Code','JetBrains Mono',Consolas,'Courier New',monospace" font-size="15" font-weight="700" fill="#b44cff">APPLIED AI</text>
+<rect x="260" y="226" width="470" height="22" rx="11" fill="#0a0420" stroke="#b44cff" stroke-opacity=".6"/>
+<rect x="263" y="229" width="0" height="16" rx="8" fill="#b44cff" filter="url(#gl)"><animate attributeName="width" values="0;464;464;0" keyTimes="0;.6;.9;1" dur="10s" begin="1.5s" repeatCount="indefinite"/></rect>
+<rect x="263" y="230" width="464" height="5" rx="3" fill="#fff" opacity=".22"/>
+<line x1="416.66666666666663" y1="223" x2="416.66666666666663" y2="251" stroke="#fff" stroke-opacity=".5"/><line x1="573.3333333333333" y1="223" x2="573.3333333333333" y2="251" stroke="#fff" stroke-opacity=".5"/>
+<text x="750" y="243" font-family="'Fira Code','JetBrains Mono',Consolas,'Courier New',monospace" font-size="13" fill="#fff">ROOKIE ▸ PRO ▸ MASTER</text><text x="40" y="294" font-family="'Fira Code','JetBrains Mono',Consolas,'Courier New',monospace" font-size="15" font-weight="700" fill="#ff2bd6">WEB &amp; APIS</text>
+<rect x="260" y="278" width="470" height="22" rx="11" fill="#0a0420" stroke="#ff2bd6" stroke-opacity=".6"/>
+<rect x="263" y="281" width="0" height="16" rx="8" fill="#ff2bd6" filter="url(#gl)"><animate attributeName="width" values="0;464;464;0" keyTimes="0;.6;.9;1" dur="11s" begin="2.0s" repeatCount="indefinite"/></rect>
+<rect x="263" y="282" width="464" height="5" rx="3" fill="#fff" opacity=".22"/>
+<line x1="416.66666666666663" y1="275" x2="416.66666666666663" y2="303" stroke="#fff" stroke-opacity=".5"/><line x1="573.3333333333333" y1="275" x2="573.3333333333333" y2="303" stroke="#fff" stroke-opacity=".5"/>
+<text x="750" y="295" font-family="'Fira Code','JetBrains Mono',Consolas,'Courier New',monospace" font-size="13" fill="#fff">ROOKIE ▸ PRO ▸ MASTER</text></svg>
