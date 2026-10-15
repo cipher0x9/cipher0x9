@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="150" viewBox="0 0 440 150"><defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#220b5c"/><stop offset="1" stop-color="#0b2a6b"/></linearGradient>
+<linearGradient id="sheen" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".18"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<filter id="gl" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<clipPath id="cp"><rect x="6" y="6" width="428" height="138" rx="18"/></clipPath></defs>
+<rect x="8" y="12" width="424" height="134" rx="18" fill="#000" opacity=".35"/>
+<rect x="6" y="6" width="428" height="136" rx="18" fill="url(#bg)"/>
+<g clip-path="url(#cp)"><g opacity=".25"><line x1="0" y1="0" x2="-60" y2="150" stroke="#6ea8ff"/><line x1="28" y1="0" x2="-32" y2="150" stroke="#6ea8ff"/><line x1="56" y1="0" x2="-4" y2="150" stroke="#6ea8ff"/><line x1="84" y1="0" x2="24" y2="150" stroke="#6ea8ff"/><line x1="112" y1="0" x2="52" y2="150" stroke="#6ea8ff"/><line x1="140" y1="0" x2="80" y2="150" stroke="#6ea8ff"/><line x1="168" y1="0" x2="108" y2="150" stroke="#6ea8ff"/><line x1="196" y1="0" x2="136" y2="150" stroke="#6ea8ff"/><line x1="224" y1="0" x2="164" y2="150" stroke="#6ea8ff"/><line x1="252" y1="0" x2="192" y2="150" stroke="#6ea8ff"/><line x1="280" y1="0" x2="220" y2="150" stroke="#6ea8ff"/><line x1="308" y1="0" x2="248" y2="150" stroke="#6ea8ff"/><line x1="336" y1="0" x2="276" y2="150" stroke="#6ea8ff"/><line x1="364" y1="0" x2="304" y2="150" stroke="#6ea8ff"/><line x1="392" y1="0" x2="332" y2="150" stroke="#6ea8ff"/><line x1="420" y1="0" x2="360" y2="150" stroke="#6ea8ff"/><line x1="448" y1="0" x2="388" y2="150" stroke="#6ea8ff"/><line x1="476" y1="0" x2="416" y2="150" stroke="#6ea8ff"/><line x1="504" y1="0" x2="444" y2="150" stroke="#6ea8ff"/></g>
+<rect x="-200" y="0" width="140" height="150" fill="url(#sheen)" transform="skewX(-20)"><animate attributeName="x" values="-200;640" dur="4s" begin="3.6s" repeatCount="indefinite"/></rect></g>
+<rect x="6" y="6" width="428" height="136" rx="18" fill="none" stroke="#6ea8ff" stroke-width="2.5" stroke-dasharray="40 14" filter="url(#gl)"><animate attributeName="stroke-dashoffset" values="0;-108" dur="3s" repeatCount="indefinite"/></rect>
+<circle r="5" fill="#fff" filter="url(#gl)"><animateMotion dur="8s" repeatCount="indefinite" path="M24 6 H416 Q434 6 434 24 V124 Q434 142 416 142 H24 Q6 142 6 124 V24 Q6 6 24 6 Z"/></circle>
+<g filter="url(#gl)"><g><animateTransform attributeName="transform" type="translate" values="0 0;0 -8;0 0" dur="4s" begin="2.6999999999999997s" repeatCount="indefinite" calcMode="spline" keyTimes="0;.5;1" keySplines=".45 0 .55 1;.45 0 .55 1"/>
+<polygon points="78,26 107.58,43.0 78,60 48.42,43.0" fill="#6ea8ff" opacity=".95"/><polygon points="48.42,43.0 78,60 78,94 48.42,77.0" fill="#6ea8ff" opacity=".45"/><polygon points="107.58,43.0 78,60 78,94 107.58,77.0" fill="#6ea8ff" opacity=".7"/>
+<polygon points="78,26 107.58,43.0 78,60 48.42,43.0" fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="1"/><polyline points="48.42,43.0 48.42,77.0 78,94 107.58,77.0 107.58,43.0" fill="none" stroke="#fff" stroke-opacity=".35"/>
+<line x1="78" y1="60" x2="78" y2="94" stroke="#fff" stroke-opacity=".4"/></g></g>
+<ellipse cx="78" cy="118" rx="30" ry="7" fill="#6ea8ff" opacity=".3"><animate attributeName="rx" values="30;22;30" dur="4s" begin="2.6999999999999997s" repeatCount="indefinite"/></ellipse>
+<text x="140" y="68" fill="#fff" font-size="23" font-weight="700" font-family="'Segoe UI',Inter,Helvetica,Arial,sans-serif">Gemini Gems</text>
+<text x="140" y="94" fill="#6ea8ff" font-size="15" font-family="'Segoe UI',Inter,Helvetica,Arial,sans-serif">Free gem gallery</text>
+<text x="140" y="124" fill="#9fb3ff" font-size="12" font-family="'Fira Code','JetBrains Mono',Consolas,'Courier New',monospace" letter-spacing="1">OPEN LAB ▸ FREE</text>
+</svg>
