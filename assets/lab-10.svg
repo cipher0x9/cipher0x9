@@ -14,7 +14,7 @@
 <polygon points="78,26 107.58,43.0 78,60 48.42,43.0" fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="1"/><polyline points="48.42,43.0 48.42,77.0 78,94 107.58,77.0 107.58,43.0" fill="none" stroke="#fff" stroke-opacity=".35"/>
 <line x1="78" y1="60" x2="78" y2="94" stroke="#fff" stroke-opacity=".4"/></g></g>
 <ellipse cx="78" cy="118" rx="30" ry="7" fill="#6ea8ff" opacity=".3"><animate attributeName="rx" values="30;22;30" dur="4s" begin="2.6999999999999997s" repeatCount="indefinite"/></ellipse>
-<text x="140" y="68" fill="#fff" font-size="23" font-weight="700" font-family="'Segoe UI',Inter,Helvetica,Arial,sans-serif">Gemini Gems</text>
-<text x="140" y="94" fill="#6ea8ff" font-size="15" font-family="'Segoe UI',Inter,Helvetica,Arial,sans-serif">Free gem gallery</text>
+<text x="140" y="68" fill="#fff" font-size="23" font-weight="700" font-family="'Segoe UI',Inter,Helvetica,Arial,sans-serif">BA Lab</text>
+<text x="140" y="94" fill="#6ea8ff" font-size="15" font-family="'Segoe UI',Inter,Helvetica,Arial,sans-serif">Business analysis</text>
 <text x="140" y="124" fill="#9fb3ff" font-size="12" font-family="'Fira Code','JetBrains Mono',Consolas,'Courier New',monospace" letter-spacing="1">OPEN LAB ▸ FREE</text>
 </svg>
